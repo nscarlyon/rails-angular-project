@@ -1,0 +1,2 @@
+class ArtworkMovement < ApplicationRecord
+end
