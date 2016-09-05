@@ -1,7 +1,7 @@
 class CreateMovements < ActiveRecord::Migration[5.0]
   def change
     create_table :movements do |t|
-      t.string :title
+      t.string :name
 
       t.timestamps
     end
