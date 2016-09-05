@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20160905192027) do
 
   create_table "artwork_movements", force: :cascade do |t|
     t.integer  "artwork_id"
-    t.integer  "artist_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "movement_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "artworks", force: :cascade do |t|
