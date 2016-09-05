@@ -1,5 +1,13 @@
 # Specifications for the Angular Assessment
 
+1. Create Rails backend
+    - Models (artwork, artist, artwork_movement, movement)
+    - Serialize artwork & artist
+    - artworks_controller renders artwork
+    - artists_controller renders artist
+    - create routes
+    - home_controller
+
 Specs:
 - [x] Use Angular to build the app
 - [ ] Must contain some sort of nested views
@@ -8,10 +16,10 @@ Specs:
 - [ ] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
 - [ ] Data should be validated in Angular before submission
 - [ ] Must talk to the Rails backend using $http and Services
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
-- [ ] You have a large number of small Git commits
-- [ ] Your commit messages are meaningful
-- [ ] You made the changes in a commit that relate to the commit message
-- [ ] You don't include changes in a commit that aren't related to the commit message
+- [x ] You have a large number of small Git commits
+- [x ] Your commit messages are meaningful
+- [x ] You made the changes in a commit that relate to the commit message
+- [x ] You don't include changes in a commit that aren't related to the commit message
