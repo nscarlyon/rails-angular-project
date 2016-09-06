@@ -14,15 +14,15 @@ angular
         url: '/search',
         templateUrl: 'app/views/artworks/search.html'
       })
-      .state('new', {
+      .state('artworks.new', {
         url: '/new',
         templateUrl: 'app/views/artworks/new.html'
       })
-      .state('edit', {
+      .state('artworks.edit', {
         url: '/edit',
         templateUrl: 'app/views/artworks/edit.html'
       })
-      .state('show', {
+      .state('artworks.show', {
         url: '/show',
         templateUrl: 'app/views/artworks/show.html'
       })
