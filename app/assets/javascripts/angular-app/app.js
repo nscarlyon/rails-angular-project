@@ -16,7 +16,7 @@ angular
       })
       .state('artworks.new', {
         url: '/new',
-        templateUrl: 'app/views/artworks/new.html'
+        templateUrl: 'app/views/artworks/new.html.erb'
       })
       .state('artworks.edit', {
         url: '/edit',
