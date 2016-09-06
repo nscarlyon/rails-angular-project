@@ -20,4 +20,10 @@ class ArtworksController < ApplicationController
     end
   end
 
+  private
+
+  def artwork_params
+    params.require(:artwork).permit(:id, :artist_id, :title, :date_seen, :medium)
+  end
+
 end
