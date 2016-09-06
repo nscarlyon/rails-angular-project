@@ -6,4 +6,8 @@ angular
         url: '/artworks',
         templateUrl: 'app/views/artworks/index.html'
       })
+      .state('artworks.search', {
+        url: '/search',
+        templateUrl: 'app/views/artworks/search.html'
+      })
   })
