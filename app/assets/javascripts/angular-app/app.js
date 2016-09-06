@@ -10,8 +10,21 @@ angular
         url: '/artworks',
         templateUrl: 'app/views/artworks/index.html'
       })
-      .state('artworks.search', {
+      .state('search', {
         url: '/search',
         templateUrl: 'app/views/artworks/search.html'
       })
+      .state('new', {
+        url: '/new',
+        templateUrl: 'app/views/artworks/new.html'
+      })
+      .state('edit', {
+        url: '/edit',
+        templateUrl: 'app/views/artworks/edit.html'
+      })
+      .state('show', {
+        url: '/show',
+        templateUrl: 'app/views/artworks/show.html'
+      })
+
   })
