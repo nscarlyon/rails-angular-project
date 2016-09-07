@@ -1,5 +1,5 @@
 function ArtworkShowController(artwork) {
-  this.data = artwork.data
+  this.data = artwork.data["artwork"]
 }
 
 angular
