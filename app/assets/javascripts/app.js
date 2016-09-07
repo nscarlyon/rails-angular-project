@@ -24,6 +24,7 @@ angular
       })
       .state('artworks.show', {
         url: '/:id/show',
+        controller: 'ArtworkShowController'
         templateUrl: 'app/views/artworks/show.html'
       })
 
