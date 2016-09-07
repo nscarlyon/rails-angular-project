@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router'])
+  .module('app', ['ui.router', 'ngResource'])
   .config(function($stateProvider) {
     $stateProvider
       .state('home', {
@@ -19,11 +19,11 @@ angular
         templateUrl: 'app/views/artworks/new.html.erb'
       })
       .state('artworks.edit', {
-        url: '/edit',
+        url: '/:id/edit',
         templateUrl: 'app/views/artworks/edit.html'
       })
       .state('artworks.show', {
-        url: '/show',
+        url: '/:id/show',
         templateUrl: 'app/views/artworks/show.html'
       })
 
