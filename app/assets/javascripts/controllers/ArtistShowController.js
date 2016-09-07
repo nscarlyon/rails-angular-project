@@ -1,5 +1,5 @@
-function Artist() {
-  
+function Artist(artist) {
+  this.data = artist.data
 }
 
 angular
