@@ -1,7 +1,7 @@
 function Artwork($resource) {
-  return $resource('http://localhost:8080/artworks/:id', {id: '@_id'})
-})
+  return $resource('http://localhost:3000/artworks/:id.json', {id: '@_id'})
+}
 
 angular
   .module('app')
-  .services('Artwork', Artwork)
+  .service('Artwork', Artwork)
