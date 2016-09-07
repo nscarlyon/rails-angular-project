@@ -24,8 +24,13 @@ angular
       })
       .state('artworks.show', {
         url: '/:id/show',
+        templateUrl: 'app/views/artworks/show.html',
         controller: 'ArtworkShowController',
-        templateUrl: 'app/views/artworks/show.html'
-      })
+        resolve: {
+          artwork: function($stateParams, Artwork) {
+            return Artwork.getArtwork($stateParams.id)
+          }
+        }
 
+      })
   })
