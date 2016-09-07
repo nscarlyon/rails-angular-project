@@ -32,4 +32,14 @@ angular
           }
         }
       })
+      .state('artists', {
+        url: '/artists/:id/show',
+        templateUrl: 'app/views/artists/show.html',
+        controller: 'ArtistShowController as artist',
+        resolve: {
+          artist: function($stateParams, Artist) {
+            return Artist.getArtist($stateParams.id)
+          }
+        }
+      })
   })
