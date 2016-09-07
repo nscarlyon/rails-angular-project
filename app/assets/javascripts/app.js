@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router'])
+  .module('app', ['ui.router', 'ngResource'])
   .config(function($stateProvider) {
     $stateProvider
       .state('home', {
