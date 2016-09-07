@@ -1,5 +1,5 @@
 function ArtistShowController(artist) {
-  this.data = artist.data
+  this.data = artist.data["artist"]
 }
 
 angular
