@@ -1,5 +1,5 @@
-function ArtworkShowController($scope, $stateParams, Artwork) {
-  $scope.artwork = Artwork.get({id: $stateParams.id})
+function ArtworkShowController(artwork) {
+  this.data = artwork.data
 }
 
 angular
