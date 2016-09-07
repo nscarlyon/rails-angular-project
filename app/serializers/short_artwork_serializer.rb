@@ -1,3 +1,3 @@
 class ShortArtworkSerializer < ActiveModel::Serializer
-  attributes :id, :title, :medium
+  attributes :title, :medium
 end
