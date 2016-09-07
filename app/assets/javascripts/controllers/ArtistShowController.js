@@ -1,4 +1,4 @@
-function Artist(artist) {
+function ArtistShowController(artist) {
   this.data = artist.data
 }
 
