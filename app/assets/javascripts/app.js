@@ -25,12 +25,11 @@ angular
       .state('artworks.show', {
         url: '/:id/show',
         templateUrl: 'app/views/artworks/show.html',
-        controller: 'ArtworkShowController',
+        controller: 'ArtworkShowController as artwork',
         resolve: {
           artwork: function($stateParams, Artwork) {
             return Artwork.getArtwork($stateParams.id)
           }
         }
-
       })
   })
