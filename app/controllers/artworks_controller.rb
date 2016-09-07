@@ -17,6 +17,7 @@ class ArtworksController < ApplicationController
     respond_to do |f|
       @artwork = Artwork.find(params[:id])
       f.json { render json: @artwork}
+      f.html {render :show}
     end
   end
 
