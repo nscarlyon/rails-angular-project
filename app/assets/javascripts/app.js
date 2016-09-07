@@ -34,7 +34,7 @@ angular
       })
       .state('artists', {
         url: '/artists/:id/show',
-        templateUrl: 'app/views/artists/show.html',
+        templateUrl: 'app/views/artists/show.html.erb',
         controller: 'ArtistShowController as artist',
         resolve: {
           artist: function($stateParams, Artist) {
