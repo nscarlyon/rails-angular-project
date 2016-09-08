@@ -1,12 +1,15 @@
-Artworks Index
+<div ui-view>
+  <div ng-repeat="artwork in artworks.data">
+    <a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a>
 
-<div ng-repeat="artwork in artworks.data">
-  {{artwork.title}}
+    {{artwork.medium}}
 
-  {{artwork.medium}}
+    {{artwork.date_seen}}
 
-  {{artwork.date_seen}}
-
-  {{artwork.artist.name}}
-
+    {{artwork.artist.name}}
+    
+    <div ng-repeat="movement in artwork.movements">
+      {{movement.name}}
+    </div>
+  </div>
 </div>
