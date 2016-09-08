@@ -31,6 +31,12 @@ New Artwork Form
 
   <p><label>Date Seen</label> <input name="dateSeen" ng-model="artwork.date_seen" /></p>
 
+  <p><label>Select Movement(s)</label></p>
+  <div ng-repeat="movement in artwork.movements">
+
+    {{movement.name}}
+  </div>
+
   <p><label>Or Add New Movement</label> <input name="movement" minlength="2" ng-model="artwork.movement" /></p>
 
   <div ng-messages="form.movement.$error" ng-if="form.movement.$touched">
