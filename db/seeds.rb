@@ -10,3 +10,6 @@ Artist.create(name: "Klimt")
 Artwork.create(title: "test title", medium: "oil painting", artist_id: 1)
 Movement.create(name: "symbolism")
 ArtworkMovement.create(artwork_id: 1, movement_id: 1)
+
+Artwork.create(title: "tree of life", medium: "painting", artist_id: 1, date_seen: "5/23/16")
+ArtworkMovement.create(artwork_id: 2, movement_id: 1)
