@@ -9,7 +9,7 @@ angular
       .state('artworks', {
         url: '/artworks',
         templateUrl: 'artworks/index.html',
-        controller: 'ArtworksController',
+        controller: 'ArtworksController as artworks',
         resolve: {
           artworks: function(Artwork) {
             return Artwork.getArtworks()
