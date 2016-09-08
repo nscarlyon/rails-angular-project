@@ -15,6 +15,13 @@ New Artwork Form
     <div ng-message="minlength">Must be more than 2 characters!</div>
   </div>
 
+  <p><label>Medium</label> <input name="artistMedium" minlength="2" ng-model="artwork.medium" required="required" /></p>
+
+  <div ng-messages="form.medium.$error" ng-if="form.medium.$touched">
+    <div ng-message="required">Medium is required!</div>
+    <div ng-message="minlength">Must be more than 2 characters!</div>
+  </div>
+
   <p><label>Location</label> <input name="location" minlength="2" ng-model="artwork.location" required="required" /></p>
 
   <div ng-messages="form.location.$error" ng-if="form.location.$touched">
