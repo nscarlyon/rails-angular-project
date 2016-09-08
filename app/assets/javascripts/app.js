@@ -8,23 +8,23 @@ angular
       })
       .state('artworks', {
         url: '/artworks',
-        templateUrl: 'app/views/artworks/index.html'
+        templateUrl: 'artworks/index.html'
       })
       .state('artworks.search', {
         url: '/search',
-        templateUrl: 'app/views/artworks/search.html'
+        templateUrl: 'artworks/search.html'
       })
       .state('artworks.new', {
         url: '/new',
-        templateUrl: 'app/views/artworks/new.html.erb'
+        templateUrl: 'artworks/new.html'
       })
       .state('artworks.edit', {
         url: '/:id/edit',
-        templateUrl: 'app/views/artworks/edit.html'
+        templateUrl: 'artworks/edit.html'
       })
       .state('artworks.show', {
-        url: '/:id/show',
-        templateUrl: 'app/views/artworks/show.html',
+        url: '/:id',
+        templateUrl: 'artworks/show.html',
         controller: 'ArtworkShowController as artwork',
         resolve: {
           artwork: function($stateParams, Artwork) {
@@ -33,8 +33,8 @@ angular
         }
       })
       .state('artists', {
-        url: '/artists/:id/show',
-        templateUrl: 'app/views/artists/show.html.erb',
+        url: '/artists/:id',
+        templateUrl: 'artists/show.html',
         controller: 'ArtistShowController as artist',
         resolve: {
           artist: function($stateParams, Artist) {
