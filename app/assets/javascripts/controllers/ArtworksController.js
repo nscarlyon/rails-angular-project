@@ -1,4 +1,5 @@
 function ArtworksController(artworks) {
+  debugger;
   this.data = artworks.data["artworks"]
 }
 
