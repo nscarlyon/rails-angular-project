@@ -1,4 +1,4 @@
-function MovementsService($http) {
+function Movements($http) {
   this.getMovements = function() {
     return $http.get('http://localhost:3000/movements.json')
   }
@@ -6,4 +6,4 @@ function MovementsService($http) {
 
 angular
   .module('app')
-  .service('MovementsService', MovementsService)
+  .service('Movements', Movements)

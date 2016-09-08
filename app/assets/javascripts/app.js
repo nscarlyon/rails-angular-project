@@ -29,7 +29,12 @@ angular
       .state('artworks.new', {
         url: '/new',
         templateUrl: 'artworks/new.html',
-        controller: 'ArtworkFormController as artwork'
+        controller: 'ArtworkFormController as artwork',
+        resolve: {
+          movements: function(Movements) {
+            return Movements.getMovements()
+          }
+        }
       })
       .state('artworks.edit', {
         url: '/:id/edit',
