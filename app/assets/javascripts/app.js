@@ -4,7 +4,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/views/index.html'
+        templateUrl: 'index.html'
       })
       .state('artworks', {
         url: '/artworks',
