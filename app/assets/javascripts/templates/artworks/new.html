@@ -1,6 +1,12 @@
-New Artworks Form
+New Artwork Form
 
-<form>
-<p>Title: <input field="text"></p>
-<p><input type="submit" value="submit"><p>
+<form name="form">
+  <p><label>Title</label> <input name="title" minlength="2" ng-model="artwork.title" required="required" /></p>
+
+  <div ng-messages="form.title.$error" ng-if="form.title.$touched">
+    <div ng-message="required">Title is required!</div>
+    <div ng-message="minlength">Must be more than 2 characters!</div>
+  </div>
+  
+  <p><input type="submit" value="submit"><p>
 </form>
