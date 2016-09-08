@@ -1,5 +1,7 @@
 function ArtworkFormController($scope) {
-  debugger;
+  $scope.submitArtwork = function() {
+
+  }
 }
 
 angular

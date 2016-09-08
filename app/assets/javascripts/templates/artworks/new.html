@@ -1,6 +1,6 @@
 New Artwork Form
 
-<form name="form">
+<form name="form" ng-submit="submitArtwork()">
   <p><label>Title</label> <input name="title" minlength="2" ng-model="artwork.title" required="required" /></p>
 
   <div ng-messages="form.title.$error" ng-if="form.title.$touched">
