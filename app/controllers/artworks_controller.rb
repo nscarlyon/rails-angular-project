@@ -1,5 +1,7 @@
 class ArtworksController < ApplicationController
 
+  skip_before_filter  :verify_authenticity_token
+
   def index
     @artworks = Artwork.all
     render json: @artworks
@@ -14,7 +16,6 @@ class ArtworksController < ApplicationController
 
     if @artwork.valid?
       @artwork.save
-      redirect_to artworks_path
     end
   end
 
@@ -28,7 +29,7 @@ class ArtworksController < ApplicationController
   private
 
   def artwork_params
-    params.require(:artwork).permit(:id, :artist_id, :title, :date_seen, :medium)
+    params.require(:artwork).permit(:id, :artist_id, :title, :date_seen, :medium, :location)
   end
 
 end

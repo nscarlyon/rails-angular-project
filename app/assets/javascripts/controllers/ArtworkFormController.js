@@ -1,6 +1,7 @@
-function ArtworkFormController($scope) {
+function ArtworkFormController($scope, $http) {
   $scope.submitArtwork = function() {
-
+    debugger;
+    $http.post('http://localhost:3000/artworks', $scope.artwork)
   }
 }
 
