@@ -28,7 +28,8 @@ angular
       })
       .state('artworks.new', {
         url: '/new',
-        templateUrl: 'artworks/new.html'
+        templateUrl: 'artworks/new.html',
+        controller: 'ArtworkNewController as artwork'
       })
       .state('artworks.edit', {
         url: '/:id/edit',
