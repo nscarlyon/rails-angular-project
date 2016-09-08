@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
 
-  skip_before_filter  :verify_authenticity_token
+  skip_before_action  :verify_authenticity_token
 
   def index
     @artworks = Artwork.all
@@ -13,10 +13,11 @@ class ArtworksController < ApplicationController
 
   def create
     @artwork = Artwork.new(artwork_params)
+    @artwork.artist = Artist.find_or_create_by(name: params["artist_name"])
 
-    if @artwork.valid?
-      @artwork.save
-    end
+      if @artwork.valid?
+        @artwork.save
+      end
   end
 
   def show
@@ -29,7 +30,7 @@ class ArtworksController < ApplicationController
   private
 
   def artwork_params
-    params.permit(:id, :artist_id, :title, :date_seen, :medium, :location, :date_seen, :artist_name, :movements)
+    params.permit(:id, :title, :date_seen, :medium, :location)
   end
 
 end
