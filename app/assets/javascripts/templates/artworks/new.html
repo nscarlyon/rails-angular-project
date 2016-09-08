@@ -33,8 +33,7 @@ New Artwork Form
 
   <p><label>Select Movement(s)</label></p>
   <div ng-repeat="movement in artwork.movements">
-
-    {{movement.name}}
+    {{movement.name}} <input id="{{movement.id}}" type="checkbox" name="movements[{{movement.id - 1}}]" value="{{movement.id}}" />
   </div>
 
   <p><label>Or Add New Movement</label> <input name="movement" minlength="2" ng-model="artwork.movement" /></p>
