@@ -15,9 +15,10 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.new(artwork_params)
     @artwork.artist = Artist.find_or_create_by(name: params["artist_name"])
 
-      if @artwork.valid?
-        @artwork.save
-      end
+    if params["movement"] != ""
+      @artwork.movements << Movement.find_or_create_by(name: params["movement"].capitalize)
+    end
+    @artwork.save
   end
 
   def show
