@@ -31,10 +31,9 @@ New Artwork Form
 
   <p><label>Date Seen</label> <input name="dateSeen" ng-model="artwork.date_seen" /></p>
 
-  <p><label>Art Movements</label> <input name="movements" minlength="2" ng-model="artwork.movements" required="required" /></p>
+  <p><label>Or Add New Movement</label> <input name="movement" minlength="2" ng-model="artwork.movement" /></p>
 
-  <div ng-messages="form.movements.$error" ng-if="form.movements.$touched">
-    <div ng-message="required">At least one art movement is required!</div>
+  <div ng-messages="form.movement.$error" ng-if="form.movement.$touched">
     <div ng-message="minlength">Must be more than 2 characters!</div>
   </div>
 
