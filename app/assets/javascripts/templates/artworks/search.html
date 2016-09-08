@@ -1,6 +1,8 @@
 Artworks Search Page
 
-<div ng-repeat="artwork in artworks.data">
+<input ng-model="artworks.data.search" />
+
+<div ng-repeat="artwork in artworks.data | filter: artworks.data.search">
   <a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a>
 
   {{artwork.medium}}
