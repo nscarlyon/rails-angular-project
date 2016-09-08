@@ -3,7 +3,8 @@ class CreateArtworks < ActiveRecord::Migration[5.0]
     create_table :artworks do |t|
       t.string :title
       t.string :medium
-      t.date :date_seen
+      t.string :location
+      t.string :date_seen
       t.integer :artist_id
 
       t.timestamps

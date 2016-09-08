@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Artist.create(name: "Klimt")
-Artwork.create(title: "test title", medium: "oil painting", artist_id: 1)
+Artwork.create(title: "test title", medium: "oil painting", artist_id: 1, date_seen: "02/14/15")
 Movement.create(name: "symbolism")
 ArtworkMovement.create(artwork_id: 1, movement_id: 1)
 
