@@ -8,7 +8,13 @@ angular
       })
       .state('artworks', {
         url: '/artworks',
-        templateUrl: 'artworks/index.html'
+        templateUrl: 'artworks/index.html',
+        controller: 'ArtworksController',
+        resolve: {
+          artworks: function(Artwork) {
+            return Artwork.getArtworks()
+          }
+        }
       })
       .state('artworks.search', {
         url: '/search',
