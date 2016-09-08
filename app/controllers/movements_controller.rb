@@ -2,7 +2,7 @@ class MovementsController < ApplicationController
   def index
     respond_to do |f|
       @movements = Movement.all
-      f.json { render json: @artwork}
+      f.json { render json: @movements}
     end
   end
 end
