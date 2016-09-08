@@ -18,7 +18,13 @@ angular
       })
       .state('artworks.search', {
         url: '/search',
-        templateUrl: 'artworks/search.html'
+        templateUrl: 'artworks/search.html',
+        controller: 'ArtworksController as artworks',
+        resolve: {
+          artworks: function(Artwork) {
+            return Artwork.getArtworks()
+          }
+        }
       })
       .state('artworks.new', {
         url: '/new',
