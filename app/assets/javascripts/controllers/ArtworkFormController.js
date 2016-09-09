@@ -1,6 +1,7 @@
-function ArtworkFormController($scope, $http, movements) {
+function ArtworkFormController($scope, $http, $state, movements) {
 
   $scope.selection = [];
+  this.movements = movements.data.movements
 
   $scope.toggleSelection = function(movementId) {
     var id = $scope.selection.indexOf(movementId)
@@ -13,10 +14,9 @@ function ArtworkFormController($scope, $http, movements) {
 
   $scope.submitArtwork = function() {
     $scope.artwork.movements = $scope.selection
-    debugger;
     $http.post('http://localhost:3000/artworks', $scope.artwork)
-  }
-  this.movements = movements.data.movements
+    $state.reload();
+    alert("artwork successfully created!")
 }
 
 angular
