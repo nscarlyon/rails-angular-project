@@ -4,7 +4,7 @@ artworks show
 
   {{artwork.data.medium}}
 
-  <input type="text" ng-model="artwork.data.date_seen" />
+  {{artwork.data.date_seen}} <input type="text" ng-model="artwork.data.date_seen" ng-change="updateDateSeen()"/>
 
   {{artwork.data.artist.name}}
 
