@@ -1,7 +1,7 @@
 <p>Artworks Search Page</p>
 
 Filter by:
-  <select ng-model="artworks.filter">
+  <select ng-model="selectedFilter">
     <option value="title" selected>Title</option>
     <option value="artistName">Artist Name</option>
     <option value="artMovement">Art Movement</option>
@@ -21,7 +21,7 @@ Filter by:
       <th>Date Seen</th>
     </tr>
 
-    <tr ng-repeat="artwork in artworks.data | filter: artworks.data.search">
+    <tr ng-repeat="artwork in artworks.data | filter: filterArtworks(selectedFilter, artworks.data.search)">
       <td><a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a></td>
       <td>{{artwork.artist.name}}</td>
       <td>
