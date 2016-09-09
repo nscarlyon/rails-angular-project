@@ -2,16 +2,29 @@ Artworks Search Page
 
 <input ng-model="artworks.data.search" />
 
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Artist Name</th>
+      <th>Associated Art Movements</ht>
+      <th>Medium</ht>
+      <th>Location</th>
+      <th>Date Seen</th>
+    </tr>
+
 <div ng-repeat="artwork in artworks.data | filter: artworks.data.search">
-  <a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a>
-
-  {{artwork.medium}}
-
-  {{artwork.date_seen}}
-
-  {{artwork.artist.name}}
-
-  <div ng-repeat="movement in artwork.movements">
-    {{movement.name}}
-  </div>
+    <tr>
+      <td><a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a></td>
+      <td>{{artwork.artist.name}}</td>
+      <td>
+          <div ng-repeat="movement in artwork.movements">
+          {{movement.name}}
+          </div>
+      </td>
+      <td>{{artwork.medium}}</td>
+      <td>{{artwork.location}}</td>
+      <td>{{artwork.date_seen}}</td>
+    </tr>
 </div>
+
+  </table>
