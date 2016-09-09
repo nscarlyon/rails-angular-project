@@ -1,0 +1,17 @@
+<div class="artwork__title">{{artwork.data.title}}</div>
+  <h3>Artist Name</h3> {{artwork.data.artist.name}}
+  <h3>Medium</h3> {{artwork.data.medium}}
+  <h3>Location</h3> {{artwork.data.location}}
+  <h3>Date Seen</h3> {{artwork.data.date_seen}}
+
+  <input type="text"
+  ng-model="artwork.data.date_seen"
+  ng-model-options='{ debounce: 1000 }'
+  ng-change="updateDateSeen(artwork.data)"/>
+
+  <h3>Movements</h3>
+    <ul>
+      <li ng-repeat="movement in artwork.data.movements">
+        {{movement.name}}
+      </li>
+    </ul>
