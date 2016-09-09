@@ -52,5 +52,5 @@ Edit Artwork Form
     <div ng-message="minlength">Must be more than 2 characters!</div>
   </div>
 
-  <p><input type="submit" value="submit" ng-click="updateArtwork()" ng-disabled="(form.$invalid && form.$dirty) || form.$pristine"></p>
+  <p><input type="submit" value="submit" ng-click="updateArtwork(artwork.data)" ng-disabled="(form.$invalid && form.$dirty) || form.$pristine"></p>
 </form>

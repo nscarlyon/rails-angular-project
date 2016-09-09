@@ -1,4 +1,4 @@
-function ArtworkEditController(artwork, movements, $scope, $http) {
+function ArtworkEditController(artwork, movements, $state, $scope, $http) {
     this.data = artwork.data["artwork"]
     this.movements = movements.data.movements
     $scope.selection = [];
@@ -12,9 +12,10 @@ function ArtworkEditController(artwork, movements, $scope, $http) {
       }
     }
 
-    $scope.updateArtwork = function() {
-      $scope.artwork.movements = $scope.selection
-      $http.patch('http://localhost:3000/artworks/' + $scope.artwork.id, $scope.artwork)
+    $scope.updateArtwork = function($scope) {
+      debugger;
+      $scope.movements = $scope.selection
+      $http.patch('http://localhost:3000/artworks/' + $scope.id, $scope)
       $state.reload();
       alert("artwork successfully updated!")
     }
