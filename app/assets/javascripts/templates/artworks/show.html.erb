@@ -4,7 +4,11 @@ artworks show
 
   {{artwork.data.medium}}
 
-  {{artwork.data.date_seen}} <input type="text" ng-model="artwork.data.date_seen" ng-change="updateDateSeen(artwork.data)"/>
+  {{artwork.data.date_seen}}
+  <input type="text"
+  ng-model="artwork.data.date_seen"
+  ng-model-options='{ debounce: 1000 }'
+  ng-change="updateDateSeen(artwork.data)"/>
 
   {{artwork.data.artist.name}}
 
