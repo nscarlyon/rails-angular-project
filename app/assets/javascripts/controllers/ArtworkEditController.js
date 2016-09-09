@@ -11,6 +11,14 @@ function ArtworkEditController(artwork, movements, $scope, $http) {
         $scope.selection.push(movementId)
       }
     }
+
+    $scope.updateArtwork = function() {
+      $scope.artwork.movements = $scope.selection
+      $http.patch('http://localhost:3000/artworks/' + $scope.artwork.id, $scope.artwork)
+      $state.reload();
+      alert("artwork successfully updated!")
+    }
+
 }
 
 angular
