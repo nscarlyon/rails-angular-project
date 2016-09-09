@@ -38,7 +38,13 @@ angular
       })
       .state('artworks.edit', {
         url: '/:id/edit',
-        templateUrl: 'artworks/edit.html'
+        templateUrl: 'artworks/edit.html',
+        controller: 'ArtworkShowController as artwork',
+        resolve: {
+          artwork: function($stateParams, Artwork) {
+            return Artwork.getArtwork($stateParams.id)
+          }
+        }
       })
       .state('artworks.show', {
         url: '/:id',
