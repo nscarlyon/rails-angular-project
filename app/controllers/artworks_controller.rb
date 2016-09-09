@@ -29,6 +29,12 @@ class ArtworksController < ApplicationController
     end
   end
 
+  def update
+    @artwork = Artwork.find(params[:id])
+    @artwork.update(artwork_params)
+    @artwork.save
+  end
+
   private
 
   def artwork_params
