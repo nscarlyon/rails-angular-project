@@ -16,3 +16,17 @@ h3 {
 body {
   color: #b93a32
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #5c1e19;
+    border-radius: 5px;
+    margin: 50px 0;
+}
+
+th {
+    background: #932f28;
+    border-bottom: 2px solid #5c1e19;
+    color: #fff;
+}
