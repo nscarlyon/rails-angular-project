@@ -30,3 +30,11 @@ th {
     border-bottom: 2px solid #5c1e19;
     color: #fff;
 }
+
+tr:nth-child(even) {
+  background: #f3d6d4;
+}
+
+tr:nth-child(odd) {
+  background: #FFF;
+}
