@@ -1,6 +1,5 @@
 function ArtworkShowController(artwork) {
   this.data = artwork.data["artwork"]
-  debugger;
 }
 
 angular

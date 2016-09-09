@@ -4,11 +4,11 @@
 
     {{artwork.medium}}
 
-    {{artwork.date_seen}}
+    <input type="text" ng-model="artwork.date_seen" />
 
     {{artwork.artist.name}}
 
-    {{artwork.data.location}}
+    {{artwork.location}}
 
     <div ng-repeat="movement in artwork.movements">
       {{movement.name}}
