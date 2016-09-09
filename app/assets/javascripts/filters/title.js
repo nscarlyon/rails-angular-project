@@ -1,5 +1,5 @@
 function title() {
-
+  console.log("hello!")
 }
 
 angular

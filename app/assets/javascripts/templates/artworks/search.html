@@ -21,7 +21,7 @@ Filter by:
       <th>Date Seen</th>
     </tr>
 
-    <tr ng-repeat="artwork in artworks.data | filter: filterArtworks(selectedFilter, artworks.data.search)">
+    <tr ng-repeat="artwork in artworks.data | title: artworks.data.search">
       <td><a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a></td>
       <td>{{artwork.artist.name}}</td>
       <td>
