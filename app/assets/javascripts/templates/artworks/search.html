@@ -1,15 +1,10 @@
 <p>Artworks Search Page</p>
 
-Filter by:
-  <select ng-model="selectedFilter">
-    <option value="Title" selected>Title</option>
-    <option value="ArtistName">Artist Name</option>
-    <option value="ArtMovement">Art Movement</option>
-    <option value="Medium">Medium</option>
-    <option value="Location">Location</option>
-  </select>
-
-<input ng-model="artworks.data.search" /><br>
+Title: <input ng-model="title">
+Artist Name: <input ng-model="artistName">
+Movement: <input ng-model="movement">
+Location: <input ng-model="location">
+Date Seen: <input ng-model="dateSeen"><br>
 
   <table>
     <tr>
@@ -21,7 +16,8 @@ Filter by:
       <th>Date Seen</th>
     </tr>
 
-    <tr ng-repeat="artwork in artworks.data | Title: artworks.data.search">
+    <tr ng-repeat="artwork in artworks.data | filter: {title: title, location: location, date_seen: dateSeen,
+      artist: {name: artistName}, movements: {name: movement}}">
       <td><a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a></td>
       <td>{{artwork.artist.name}}</td>
       <td>
