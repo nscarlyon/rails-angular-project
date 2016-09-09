@@ -60,4 +60,8 @@ angular
           }
         }
       })
+      .state('artists.artworks', {
+        url: '/artworks',
+        templateUrl: 'artists/artworks.html'
+      })
   })
