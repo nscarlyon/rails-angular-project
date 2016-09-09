@@ -1,6 +1,6 @@
 New Artwork Form
 
-<form name="form" ng-submit="submitArtwork()">
+<form name="form">
   <p><label>Title</label> <input name="title" minlength="2" ng-model="artwork.title" required="required" /></p>
 
   <div ng-messages="form.title.$error" ng-if="form.title.$touched">
@@ -33,7 +33,12 @@ New Artwork Form
 
   <p><label>Select Movement(s)</label></p>
   <div ng-repeat="movement in artwork.movements">
-    {{movement.name}} <input id="{{movement.id}}" type="checkbox" name="movements[{{movement.id - 1}}]" value="{{movement.id}}" />
+    {{movement.name}} <input id="{{movement.id}}"
+    ng-model="movement.checked"
+    ng-checked="selection.indexOf(movement.name) > -1"
+    value="{{movement.id}}"
+    type="checkbox"
+    ng-click="toggleSelection(movement.id)" />
   </div>
 
   <p><label>Or Add New Movement</label> <input name="movement" minlength="2" ng-model="artwork.movement" /></p>
@@ -42,5 +47,5 @@ New Artwork Form
     <div ng-message="minlength">Must be more than 2 characters!</div>
   </div>
 
-  <p><input type="submit" value="submit"></p>
+  <p><input type="submit" value="submit" ng-click="submitArtwork()"></p>
 </form>
