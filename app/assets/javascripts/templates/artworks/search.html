@@ -19,7 +19,7 @@ Date Seen: <input ng-model="dateSeen"><br>
     <tr ng-repeat="artwork in artworks.data | filter: {title: title, location: location, date_seen: dateSeen,
       artist: {name: artistName}, movements: {name: movement}}">
       <td><a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a></td>
-      <td>{{artwork.artist.name}}</td>
+      <td><a ui-sref="artists({id: artwork.artist_id})">{{artwork.artist.name}}</a></td>
       <td>
           <div ng-repeat="movement in artwork.movements">
           {{movement.name}}
