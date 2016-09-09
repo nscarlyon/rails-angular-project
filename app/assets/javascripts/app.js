@@ -39,10 +39,13 @@ angular
       .state('artworks.edit', {
         url: '/:id/edit',
         templateUrl: 'artworks/edit.html',
-        controller: 'ArtworkShowController as artwork',
+        controller: 'ArtworkEditController as artwork',
         resolve: {
           artwork: function($stateParams, Artwork) {
             return Artwork.getArtwork($stateParams.id)
+          },
+          movements: function(Movements) {
+            return Movements.getMovements()
           }
         }
       })
