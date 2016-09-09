@@ -1,3 +1,10 @@
 // Place all the styles related to the artworks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.artwork__title {
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #b93a32;
+}
