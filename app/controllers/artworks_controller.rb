@@ -35,6 +35,11 @@ class ArtworksController < ApplicationController
     @artwork.save
   end
 
+  def destroy
+    @artwork = Artwork.find(params[:id])
+    @artwork.destroy
+  end
+
   private
 
   def artwork_params
