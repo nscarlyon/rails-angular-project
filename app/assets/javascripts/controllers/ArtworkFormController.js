@@ -17,6 +17,7 @@ function ArtworkFormController($scope, $http, $state, movements) {
     $http.post('http://localhost:3000/artworks', $scope.artwork)
     $state.reload();
     alert("artwork successfully created!")
+  }
 }
 
 angular
