@@ -1,7 +1,11 @@
-function title() {
-  console.log("hello!")
+function Title() {
+  return function(artworks, title) {
+    return artworks.filter(function(artwork){
+      return artwork.title == title;
+    });
+  };
 }
 
 angular
   .module('app')
-  .filter('title', title)
+  .filter('Title', Title)
