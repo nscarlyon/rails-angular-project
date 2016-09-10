@@ -46,7 +46,7 @@ Edit Artwork Form
     <input
     name="movement"
     minlength="2"
-    ng-model="artwork.movement"/>
+    ng-model="artwork.data.movement"/>
 
   <div ng-messages="form.movement.$error" ng-if="form.movement.$touched">
     <div ng-message="minlength">Must be more than 2 characters!</div>
