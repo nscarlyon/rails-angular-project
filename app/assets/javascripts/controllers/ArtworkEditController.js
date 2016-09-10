@@ -13,7 +13,6 @@ function ArtworkEditController(artwork, movements, $state, $scope, $http) {
     }
 
     $scope.updateArtwork = function(newArtwork) {
-      debugger;
       newArtwork.movements = $scope.selection
       $http.patch('http://localhost:3000/artworks/' + newArtwork.id, newArtwork)
       $state.reload();
