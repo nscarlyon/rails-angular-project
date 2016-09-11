@@ -3,6 +3,10 @@ function ArtworkEditController(artwork, movements, $state, $scope, $http) {
     this.movements = movements.data.movements
     $scope.selection = [];
 
+    artwork.data.artwork.movements.forEach(function(movement) {
+      $scope.selection.push(movement.id)
+    })
+
     $scope.toggleSelection = function(movementId) {
       var id = $scope.selection.indexOf(movementId)
       if(id > -1){
