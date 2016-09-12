@@ -3,7 +3,7 @@ function ArtworkEditController(artwork, movements, $state, $scope, $http, Artwor
     this.movements = movements.data.movements
     $scope.selection = [];
 
-    artwork.data.artwork.movements.forEach(function(movement) {
+    this.data.movements.forEach(function(movement) {
       $scope.selection.push(movement.id)
     })
 
