@@ -1,4 +1,3 @@
-New Artwork Form
 
 <form name="form">
   <p><label>Title</label> <input name="title" minlength="2" ng-model="artwork.data.title" required="required" /></p>
@@ -48,8 +47,8 @@ New Artwork Form
   </div>
 
   <p><input type="submit" value="submit"
-    ng-click="artwork.submitArtwork(artwork.data)"
+      ng-click="artwork.submitArtwork(artwork.data)"
       ui-sref="artworks.search"
       ui-sref-opts="{reload: true}"
-    ng-disabled="(form.$invalid && form.$dirty) || form.$pristine"></p>
+      ng-disabled="(form.$invalid && form.$dirty) || form.$pristine"></p>
 </form>
