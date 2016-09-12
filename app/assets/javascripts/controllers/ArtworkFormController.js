@@ -7,6 +7,19 @@ function ArtworkFormController(artwork, $scope, $http, $state, movements, Artwor
     this.data = artwork;
   } else {
     this.data = artwork.data["artwork"];
+
+    this.data.movements.forEach(function(movement) {
+      $scope.selection.push(movement.id)
+    })
+  }
+
+  $scope.movementChecked = function(id) {
+    var value
+
+    artwork.data.artwork.movements.forEach(function(movement) {
+      if(id === movement.id) {value = movement.id}
+    })
+    return value
   }
 
   $scope.toggleSelection = function(movementId) {
