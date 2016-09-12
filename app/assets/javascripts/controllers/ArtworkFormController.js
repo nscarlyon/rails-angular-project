@@ -1,4 +1,4 @@
-function ArtworkFormController($scope, $http, $state, movements) {
+function ArtworkFormController($scope, $http, $state, movements, Artwork) {
 
   $scope.selection = [];
   this.movements = movements.data.movements
@@ -14,7 +14,7 @@ function ArtworkFormController($scope, $http, $state, movements) {
 
   $scope.submitArtwork = function() {
     $scope.artwork.movements = $scope.selection
-    $http.post('http://localhost:3000/artworks', $scope.artwork)
+    Artwork.submitArtwork($scope.artwork)
     $state.reload();
     alert("artwork successfully created!")
   }
