@@ -1,5 +1,7 @@
 Artist Show Page
 
-{{artist.data.name}}
+<h1>{{artist.data.name}}</h1>
 
-<div ui-view></div>
+<div ui-view>
+<button class="button" ui-sref="artist.artworks({id: artist.data.id})">Load Artist Artworks</button>
+</div>
