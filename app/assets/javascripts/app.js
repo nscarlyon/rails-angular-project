@@ -31,6 +31,10 @@ angular
         templateUrl: 'artworks/new.html',
         controller: 'ArtworkFormController as artwork',
         resolve: {
+          artwork: function() {
+            var artwork = {}
+            return artwork
+          },
           movements: function(Movements) {
             return Movements.getMovements()
           }
