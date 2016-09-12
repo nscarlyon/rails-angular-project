@@ -19,10 +19,14 @@ function ArtworkFormController(artwork, $scope, $http, $state, movements, Artwor
   }
 
   $scope.submitArtwork = function(artwork) {
-    $scope.artwork.data.movements = $scope.selection
-    Artwork.submitArtwork($scope.artwork.data)
-    $state.reload();
-    alert("artwork successfully created!")
+    artwork.movements = $scope.selection
+
+    if(artwork.id === undefined) {
+      Artwork.submitArtwork($scope.artwork.data)
+    } else {
+      Artwork.updateArtwork(artwork)
+    }
+
   }
 }
 
