@@ -15,6 +15,10 @@ function Artwork($http) {
   this.submitArtwork = function(artwork) {
     $http.post('http://localhost:3000/artworks', artwork)
   }
+
+  this.updateArtwork = function(artwork) {
+    $http.patch('http://localhost:3000/artworks/' + artwork.id, newArtwork)
+  }
 }
 
 angular
