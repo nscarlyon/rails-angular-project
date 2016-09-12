@@ -8,9 +8,6 @@ function Artwork($http) {
     return $http.get('http://localhost:3000/artworks/' + id + '.json')
   }
 
-  this.destroyArtwork = function(id) {
-    return $http.delete('http://localhost:3000/artworks/' + id))
-  }
 }
 
 angular
