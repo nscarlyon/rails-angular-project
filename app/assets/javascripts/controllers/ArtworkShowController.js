@@ -1,4 +1,4 @@
-function ArtworkShowController(artwork, $scope, $http) {
+function ArtworkShowController(artwork, $scope, $http, Artwork, $state) {
   this.data = artwork.data["artwork"]
 
   $scope.updateDateSeen = function($scope) {
@@ -6,7 +6,8 @@ function ArtworkShowController(artwork, $scope, $http) {
   }
 
   $scope.destroyArtwork = function($scope) {
-    $http.delete('http://localhost:3000/artworks/' + $scope.id)
+    Artwork.destroyArtwork($scope.id)
+    alert("artwork successfully deleted!")
   }
 }
 
