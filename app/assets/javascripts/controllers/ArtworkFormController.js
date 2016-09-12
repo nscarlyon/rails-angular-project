@@ -11,15 +11,15 @@ function ArtworkFormController(artwork, $scope, $http, $state, movements, Artwor
     this.data.movements.forEach(function(movement) {
       $scope.selection.push(movement.id)
     })
-  }
 
-  $scope.movementChecked = function(id) {
-    var value
+    $scope.movementChecked = function(id) {
+      var value
 
-    artwork.data.artwork.movements.forEach(function(movement) {
-      if(id === movement.id) {value = movement.id}
-    })
-    return value
+      artwork.data.artwork.movements.forEach(function(movement) {
+        if(id === movement.id) {value = movement.id}
+      })
+      return value
+    }
   }
 
   $scope.toggleSelection = function(movementId) {
@@ -35,7 +35,7 @@ function ArtworkFormController(artwork, $scope, $http, $state, movements, Artwor
     artwork.movements = $scope.selection
 
     if(artwork.id === undefined) {
-      Artwork.submitArtwork($scope.artwork.data)
+      Artwork.submitArtwork(artwork)
     } else {
       Artwork.updateArtwork(artwork)
     }
