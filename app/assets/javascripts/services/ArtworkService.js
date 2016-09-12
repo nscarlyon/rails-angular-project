@@ -17,7 +17,7 @@ function Artwork($http) {
   }
 
   this.updateArtwork = function(artwork) {
-    $http.patch('http://localhost:3000/artworks/' + artwork.id, newArtwork)
+    $http.patch('http://localhost:3000/artworks/' + artwork.id, artwork)
   }
 }
 
