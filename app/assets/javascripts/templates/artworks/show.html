@@ -16,5 +16,11 @@
       </li>
     </ul>
 
-    <button class="button" ng-click="destroyArtwork(artwork.data)">Destroy Artwork</button>
+    <button class="button"
+      ng-click="destroyArtwork(artwork.data)"
+      ui-sref="artworks.search"
+      ui-sref-opts="{reload: true}">
+      Destroy Artwork
+    </button>
+    
     <button class="button" ui-sref="artworks.edit({id: artwork.data.id})">Edit Artwork</button>
