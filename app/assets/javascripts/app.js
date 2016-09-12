@@ -1,6 +1,6 @@
 angular
   .module('app', ['ui.router', 'templates', 'ngMessages'])
-  .config(function($stateProvider, $urlRouterProvider$url) {
+  .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
