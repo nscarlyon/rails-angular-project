@@ -42,8 +42,8 @@ angular
       })
       .state('artworks.edit', {
         url: '/:id/edit',
-        templateUrl: 'artworks/edit.html',
-        controller: 'ArtworkEditController as artwork',
+        templateUrl: 'artworks/new.html',
+        controller: 'ArtworkFormController as artwork',
         resolve: {
           artwork: function($stateParams, Artwork) {
             return Artwork.getArtwork($stateParams.id)
