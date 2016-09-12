@@ -8,7 +8,7 @@ New Artwork Form
     <div ng-message="minlength">Must be more than 2 characters!</div>
   </div>
 
-  <p><label>Artist Name</label> <input name="artistName" minlength="2" ng-model="artwork.data.artist_name" required="required" /></p>
+  <p><label>Artist Name</label> <input name="artistName" minlength="2" ng-model="artwork.data.artist.name" required="required" /></p>
 
   <div ng-messages="form.artistName.$error" ng-if="form.artistName.$touched">
     <div ng-message="required">Artist name is required!</div>
