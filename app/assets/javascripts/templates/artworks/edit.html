@@ -32,17 +32,16 @@ Edit Artwork Form
   <p><label>Date Seen</label> <input name="dateSeen" ng-model="artwork.data.date_seen" /></p>
 
   <p><label>Select Movement(s)</label></p>
-  <div ng-repeat="m in artwork.data.movements">
+
     <div ng-repeat="movement in artwork.movements">
-      {{movement.name}} <input id="{{movement.id}}"
-      ng-model="movement.checked"
-      ng-checked="{{movement.id}} == {{m.id}}"
-      value="{{movement.id}}"
+      {{movement.name}} <input id="movement.id"
+    
+      ng-checked="movementChecked(movement.id)"
+      ng-true-value="movement.id"
       type="checkbox"
       ng-click="toggleSelection(movement.id)"
       />
     </div>
-  </div>
 
   <label>Or Add A Movement</label><br>
     <input

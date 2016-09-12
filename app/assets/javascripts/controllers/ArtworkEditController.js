@@ -7,8 +7,18 @@ function ArtworkEditController(artwork, movements, $state, $scope, $http) {
       $scope.selection.push(movement.id)
     })
 
+    $scope.movementChecked = function(id) {
+      var value
+
+      artwork.data.artwork.movements.forEach(function(movement) {
+        if(id === movement.id) {value = movement.id}
+      })
+      return value
+    }
+
     $scope.toggleSelection = function(movementId) {
       var id = $scope.selection.indexOf(movementId)
+
       if(id > -1){
         $scope.selection.splice(id, 1)
       } else {
