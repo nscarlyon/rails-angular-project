@@ -3,43 +3,49 @@ angular
   .controller('ArtworkFormController', ArtworkFormController)
 
   function ArtworkFormController(artwork, $scope, movements, Artwork) {
-    this.data = null;
-    this.movements = movements.data.movements;
-    $scope.selection = [];
-    this.movementChecked = movementChecked;
-    this.toggleSelection = toggleSelection;
-    this.submitArtwork = submitArtwork;
+    var vm = this;
+    vm.data = null;
+    vm.selection = [];
+    vm.movements = movements.data.movements;
+    vm.movementChecked =  movementChecked;
+    vm.toggleSelection = toggleSelection;
+    vm.submitArtwork = submitArtwork;
 
-    if(Object.keys(artwork).length === 0) {
-      this.data = artwork;
-    } else {
-        this.data = artwork.data["artwork"];
+    defineArtwork()
 
-        this.data.movements.forEach(function(movement) {
-          $scope.selection.push(movement.id)
-        })
+    function defineArtwork() {
+      if(Object.keys(artwork).length === 0) {
+        vm.data = artwork;
+        vm.data.movements = []
+      } else {
+        vm.data = artwork.data["artwork"];
 
-        function movementChecked(id) {
-          var value
-
-          artwork.data.artwork.movements.forEach(function(movement) {
-            if(id === movement.id) {value = movement.id}
-          })
-          return value
-          }
+        vm.data.movements.forEach(function(movement) {
+          vm.selection.push(movement.id);
+        });
       }
+    }
+
+    function movementChecked(id) {
+      var value;
+
+      vm.data.movements.forEach(function(movement) {
+        if(id === movement.id) {value = movement.id}
+      })
+      return value
+    }
 
     function toggleSelection(movementId) {
-      var id = $scope.selection.indexOf(movementId)
+      var id = vm.selection.indexOf(movementId)
       if(id > -1){
-        $scope.selection.splice(id, 1)
+        vm.selection.splice(id, 1)
       } else {
-        $scope.selection.push(movementId)
+        vm.selection.push(movementId)
       }
     }
 
     function submitArtwork(artwork) {
-      artwork.movements = $scope.selection
+      artwork.movements = vm.selection
 
       if(artwork.id === undefined) {
         Artwork.createArtwork(artwork)
