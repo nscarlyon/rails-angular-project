@@ -35,7 +35,7 @@ function ArtworkFormController(artwork, $scope, $http, $state, movements, Artwor
     artwork.movements = $scope.selection
 
     if(artwork.id === undefined) {
-      Artwork.submitArtwork(artwork)
+      Artwork.createArtwork(artwork)
     } else {
       Artwork.updateArtwork(artwork)
     }
