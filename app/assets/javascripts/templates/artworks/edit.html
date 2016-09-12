@@ -35,7 +35,7 @@ Edit Artwork Form
 
     <div ng-repeat="movement in artwork.movements">
       {{movement.name}} <input id="movement.id"
-    
+
       ng-checked="movementChecked(movement.id)"
       ng-true-value="movement.id"
       type="checkbox"
@@ -53,5 +53,7 @@ Edit Artwork Form
     <div ng-message="minlength">Must be more than 2 characters!</div>
   </div>
 
-  <p><button ng-click="updateArtwork(artwork.data)" ng-disabled="(form.$invalid && form.$dirty) || form.$pristine">Update</button></p>
+  <p><button ng-click="updateArtwork(artwork.data)"
+    ng-disabled="(form.$invalid && form.$dirty) || form.$pristine"
+    ui-sref="artworks.show({id: artwork.data.id})">Update</button></p>
 </form>

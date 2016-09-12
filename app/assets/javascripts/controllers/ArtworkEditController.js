@@ -29,7 +29,6 @@ function ArtworkEditController(artwork, movements, $state, $scope, $http, Artwor
     $scope.updateArtwork = function(newArtwork) {
       newArtwork.movements = $scope.selection
       Artwork.updateArtwork(newArtwork)
-      $state.reload()
     }
 
 }
