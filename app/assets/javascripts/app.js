@@ -1,6 +1,6 @@
 angular
   .module('app', ['ui.router', 'templates', 'ngMessages'])
-  .config(function($stateProvider) {
+  .config(function($stateProvider, $urlRouterProvider$url) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -73,4 +73,6 @@ angular
         url: '/artworks',
         templateUrl: 'artists/artworks.html'
       })
+
+      $urlRouterProvider.otherwise('/');
   })
