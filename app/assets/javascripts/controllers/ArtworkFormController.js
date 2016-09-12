@@ -18,7 +18,7 @@ function ArtworkFormController(artwork, $scope, $http, $state, movements, Artwor
     }
   }
 
-  $scope.submitArtwork = function() {
+  $scope.submitArtwork = function(artwork) {
     $scope.artwork.data.movements = $scope.selection
     Artwork.submitArtwork($scope.artwork.data)
     $state.reload();
