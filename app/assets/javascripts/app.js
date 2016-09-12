@@ -28,7 +28,7 @@ angular
       })
       .state('artworks.new', {
         url: '/new',
-        templateUrl: 'artworks/new.html',
+        templateUrl: 'artworks/form.html',
         controller: 'ArtworkFormController as artwork',
         resolve: {
           artwork: function() {
@@ -42,7 +42,7 @@ angular
       })
       .state('artworks.edit', {
         url: '/:id/edit',
-        templateUrl: 'artworks/new.html',
+        templateUrl: 'artworks/form.html',
         controller: 'ArtworkFormController as artwork',
         resolve: {
           artwork: function($stateParams, Artwork) {
