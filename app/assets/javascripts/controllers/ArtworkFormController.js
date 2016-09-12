@@ -1,7 +1,13 @@
-function ArtworkFormController($scope, $http, $state, movements, Artwork) {
-
+function ArtworkFormController(artwork, $scope, $http, $state, movements, Artwork) {
   $scope.selection = [];
-  this.movements = movements.data.movements
+  this.movements = movements.data.movements;
+  this.data = null;
+
+  if(Object.keys(artwork).length === 0) {
+    this.data = artwork;
+  } else {
+    this.data = artwork.data["artwork"];
+  }
 
   $scope.toggleSelection = function(movementId) {
     var id = $scope.selection.indexOf(movementId)
