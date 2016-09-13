@@ -1,10 +1,10 @@
 <p>Type in one or more of the search fields to filter artworks:</p>
 
-Title: <input ng-model="title">
-Artist Name: <input ng-model="artistName">
-Movement: <input ng-model="movement">
-Location: <input ng-model="location">
-Date Seen: <input ng-model="dateSeen"><br>
+  Title: <input ng-model="title">
+  Artist Name: <input ng-model="artistName">
+  Movement: <input ng-model="movement">
+  Location: <input ng-model="location">
+  Date Seen: <input ng-model="dateSeen"><br>
 
   <table>
     <tr>
@@ -17,7 +17,7 @@ Date Seen: <input ng-model="dateSeen"><br>
     </tr>
 
     <tr ng-repeat="artwork in artworks.data | filter: {title: title, location: location, date_seen: dateSeen,
-      artist: {name: artistName}, movements: {name: movement}}">
+      artist: {name: artistName}, movements: {name: movement}} | orderBy: 'title' ">
       <td><a ui-sref="artworks.show({id: artwork.id})">{{artwork.title}}</a></td>
       <td><a ui-sref="artists({id: artwork.artist_id})">{{artwork.artist.name}}</a></td>
       <td>
