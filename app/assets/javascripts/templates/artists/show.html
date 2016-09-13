@@ -1,6 +1,15 @@
-Artist Show Page
-
 <h1>{{artist.data.name}}</h1>
+
+<h3>Date of Birth</h3> {{artist.data.dob}}
+
+<h3>Date of Death</h3> {{artist.data.dod}}
+
+<h3>Movements</h3>
+  <ul>
+    <li ng-repeat="movement in artist.data.movements">
+      {{movement.name}}
+    </li>
+  </ul>
 
 <div ui-view>
 <button class="button" ui-sref=".artworks({id: artist.data.id})">Load Artist Artworks</button>
