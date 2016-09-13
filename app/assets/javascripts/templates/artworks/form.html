@@ -8,7 +8,7 @@
             required="required" />
 
 
-    <div ng-messages="form.title.$error" ng-if="form.title.$touched">
+    <div class="errors" ng-messages="form.title.$error" ng-if="form.title.$touched">
       <span ng-message="required">Title is required!</span>
       <span ng-message="minlength">Must be more than 2 characters!</span>
     </div>
@@ -21,7 +21,7 @@
            ng-model="artwork.data.artist.name"
            required="required" />
 
-    <div ng-messages="form.artistName.$error" ng-if="form.artistName.$touched">
+    <div class="errors" ng-messages="form.artistName.$error" ng-if="form.artistName.$touched">
       <span ng-message="required">Artist name is required!</span>
       <span ng-message="minlength">Must be more than 2 characters!</span>
     </div>
@@ -34,7 +34,7 @@
            ng-model="artwork.data.artist.dob"
            ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{2}$/" />
 
-    <div ng-messages="form.artistDob.$error" ng-if="form.artistDob.$touched">
+    <div class="errors" ng-messages="form.artistDob.$error" ng-if="form.artistDob.$touched">
       <span ng-message="pattern">Must be a valid date: dd/mm/yy!</span>
     </div>
   </p>
@@ -46,7 +46,7 @@ Please write the date in this format: dd/mm/yy
            ng-model="artwork.data.artist.dod"
            ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{2}$/"  />
 
-    <div ng-messages="form.artistDod.$error" ng-if="form.artistDod.$touched">
+    <div class="errors" ng-messages="form.artistDod.$error" ng-if="form.artistDod.$touched">
       <span ng-message="pattern">Must be a valid date: dd/mm/yy!</span>
     </div>
   </p>
@@ -58,7 +58,7 @@ Please write the date in this format: dd/mm/yy
            ng-model="artwork.data.medium"
            required="required" />
 
-    <div ng-messages="form.medium.$error" ng-if="form.medium.$touched">
+    <div class="errors" ng-messages="form.medium.$error" ng-if="form.medium.$touched">
       <span ng-message="required">Medium is required!</span>
       <span ng-message="minlength">Must be more than 2 characters!</span>
     </div>
@@ -71,7 +71,7 @@ Please write the date in this format: dd/mm/yy
            ng-model="artwork.data.location"
            required="required" />
 
-    <span ng-messages="form.location.$error" ng-if="form.location.$touched">
+    <div class="errors" ng-messages="form.location.$error" ng-if="form.location.$touched">
       <span ng-message="required">Location is required!</span>
       <span ng-message="minlength">Must be more than 2 characters!</span>
     </div>
@@ -102,7 +102,7 @@ Please write the date in this format: dd/mm/yy
            minlength="2"
            ng-model="artwork.data.movement" />
 
-    <div ng-messages="form.movement.$error" ng-if="form.movement.$touched">
+    <div class="errors" ng-messages="form.movement.$error" ng-if="form.movement.$touched">
       <span ng-message="minlength">Must be more than 2 characters!</span>
     </div>
   </p>
