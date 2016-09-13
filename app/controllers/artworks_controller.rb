@@ -29,8 +29,10 @@ class ArtworksController < ApplicationController
   def update
     artwork = Artwork.find(params[:id])
     artwork.update(artwork_params)
-    artwork.artist = Artist.find_or_create_by(artist_params)
+    artwork.artist = Artist.find_or_create_by(name: params["artist"]["name"])
+    artwork.artist.update(artist_params)
     artwork.movement_ids = params["movements"]
+    
     if params["movement"] && params["movement"] != ""
       artwork.movements << Movement.find_or_create_by(name: params["movement"].capitalize)
     end
