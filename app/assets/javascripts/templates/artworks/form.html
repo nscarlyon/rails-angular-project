@@ -14,6 +14,20 @@
     <div ng-message="minlength">Must be more than 2 characters!</div>
   </div>
 
+Please write the date in this format: dd/mm/yy
+  <p><label>Date of Birth</label> <input name="artistDob" minlength="2" ng-model="artwork.data.artist.dob" /></p>
+
+  <div ng-messages="form.artistDob.$error" ng-if="form.artistDob.$touched">
+    <div ng-message="minlength">Must be more than 2 characters!</div>
+  </div>
+
+Please write the date in this format: dd/mm/yy
+  <p><label>Date of Death</label> <input name="artistDod" minlength="2" ng-model="artwork.data.artist.dod" /></p>
+
+  <div ng-messages="form.artistDod.$error" ng-if="form.artistDod.$touched">
+    <div ng-message="minlength">Must be more than 2 characters!</div>
+  </div>
+
   <p><label>Medium</label> <input name="artistMedium" minlength="2" ng-model="artwork.data.medium" required="required" /></p>
 
   <div ng-messages="form.medium.$error" ng-if="form.medium.$touched">
