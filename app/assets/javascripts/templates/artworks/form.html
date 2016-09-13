@@ -15,10 +15,11 @@
   </div>
 
 Please write the date in this format: dd/mm/yy
-  <p><label>Date of Birth</label> <input name="artistDob" ng-model="artwork.data.artist.dob" /></p>
+  <p><label>Date of Birth</label> <input name="artistDob" ng-model="artwork.data.artist.dob"
+    ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{2}$/" /></p>
 
   <div ng-messages="form.artistDob.$error" ng-if="form.artistDob.$touched">
-    <div ng-message="form.artistDob.$error.date">Must be in this format: dd/mm/yy!</div>
+    <div ng-message="pattern">Must be a valid date: dd/mm/yy!</div>
   </div>
 
 Please write the date in this format: dd/mm/yy
