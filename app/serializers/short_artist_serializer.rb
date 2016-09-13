@@ -1,3 +1,3 @@
 class ShortArtistSerializer < ActiveModel::Serializer
-  attributes :name
+  attributes :name, :dob, :dod
 end
