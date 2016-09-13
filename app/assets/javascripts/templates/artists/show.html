@@ -6,7 +6,7 @@
 
 <h3>Movements</h3>
   <ul>
-    <li ng-repeat="movement in artist.data.movements">
+    <li ng-repeat="movement in artist.data.movements | unique: 'name'">
       {{movement.name}}
     </li>
   </ul>
