@@ -2,14 +2,14 @@
 
 ## Description
 
-This is a single page angular app that allows users to make a list of works of art. The user can search and filter through this list by artist, medium, location, date seen, and school of thought.
+This is a single page angular app that allows users to make a list of works of art. The user can search and filter through this list by artist, medium, location, date seen, and art movements.
 
 ## Install Instructions
 
 Type these following commands in your console:
   1. `bundle install`
   2. `npm install`
-  3. `node server.js`
+  3. `rails s`
 
 ## Contributing
 
