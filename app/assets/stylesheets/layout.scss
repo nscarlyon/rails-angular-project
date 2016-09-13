@@ -1,0 +1,29 @@
+// Place all the styles related to the artworks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #b93a32;
+}
+
+h3 {
+  color: #b93a32;
+}
+
+body {
+  color: #b93a32
+}
+
+.button {
+	background:#932f28;
+	color: #fff;
+	font-weight: bold;
+}
+
+.errors {
+  font-weight: bolder;
+  color: #6e241e;
+}

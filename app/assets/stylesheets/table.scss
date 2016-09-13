@@ -1,21 +1,7 @@
-// Place all the styles related to the artworks controller here.
+// Place all the styles related to the movements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-  font-size: 40px;
-  text-decoration: none;
-  font-weight: bolder;
-  color: #b93a32;
-}
-
-h3 {
-  color: #b93a32;
-}
-
-body {
-  color: #b93a32
-}
 
 table {
     border-collapse: collapse;
@@ -38,9 +24,4 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   background: #FFF;
-}
-
-.errors {
-  font-weight: bolder;
-  color: #6e241e;
 }
