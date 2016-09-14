@@ -6,16 +6,6 @@ angular
         url: '/',
         templateUrl: 'index.html'
       })
-      .state('artworks', {
-        url: '/artworks',
-        templateUrl: 'artworks/index.html',
-        controller: 'ArtworksController as artworks',
-        resolve: {
-          artworks: function(Artwork) {
-            return Artwork.getArtworks()
-          }
-        }
-      })
       .state('search', {
         url: '/artworks/search',
         templateUrl: 'artworks/search.html',
