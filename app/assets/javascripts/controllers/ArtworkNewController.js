@@ -1,8 +1,8 @@
 angular
   .module('app')
-  .controller('ArtworkFormController', ArtworkFormController)
+  .controller('ArtworkNewController', ArtworkNewController)
 
-  function ArtworkFormController(artwork, $scope, movements, Artwork) {
+  function ArtworkNewController(artwork, $scope, movements, Artwork) {
     var vm = this;
     vm.data = artwork
     vm.data.movements = []
