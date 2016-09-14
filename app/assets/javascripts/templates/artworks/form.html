@@ -27,27 +27,27 @@
     </div>
   </p>
 
-  Please write the date in this format: dd/mm/yy
+  Please write the date in this format: dd/mm/yyyy
   <p>
     <label>Date of Birth</label>
     <input name="artistDob"
            ng-model="artwork.data.artist.dob"
-           ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{2}$/" />
+           ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{4}$/" />
 
     <div class="errors" ng-messages="form.artistDob.$error" ng-if="form.artistDob.$touched">
-      <span ng-message="pattern">Must be a valid date: dd/mm/yy!</span>
+      <span ng-message="pattern">Must be a valid date: dd/mm/yyyy!</span>
     </div>
   </p>
 
-Please write the date in this format: dd/mm/yy
+Please write the date in this format: dd/mm/yyyy
   <p>
     <label>Date of Death</label>
     <input name="artistDod"
            ng-model="artwork.data.artist.dod"
-           ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{2}$/"  />
+           ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{4}$/"  />
 
     <div class="errors" ng-messages="form.artistDod.$error" ng-if="form.artistDod.$touched">
-      <span ng-message="pattern">Must be a valid date: dd/mm/yy!</span>
+      <span ng-message="pattern">Must be a valid date: dd/mm/yyyy!</span>
     </div>
   </p>
 
