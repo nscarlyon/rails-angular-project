@@ -1,8 +1,15 @@
 class ArtistsController < ApplicationController
+
+  def index
+    artists = Artist.all
+    render json: artists
+  end
+
   def show
+    artist = Artist.find(params[:id])
     respond_to do |f|
-      @artist = Artist.find(params[:id])
-      f.json { render json: @artist}
+      f.json { render json: artist}
     end
   end
+
 end
