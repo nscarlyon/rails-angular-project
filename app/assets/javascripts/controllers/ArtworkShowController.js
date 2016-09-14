@@ -5,11 +5,11 @@ angular
   function ArtworkShowController(artwork, $scope, Artwork) {
     this.data = artwork.data["artwork"]
 
-    $scope.updateDateSeen = function(artwork) {
+    this.updateDateSeen = function(artwork) {
       Artwork.updateArtwork(artwork)
     }
 
-    $scope.destroyArtwork = function($scope) {
+    this.destroyArtwork = function($scope) {
       Artwork.destroyArtwork($scope.id)
       alert("artwork successfully deleted!")
     }
