@@ -28,12 +28,12 @@
 
     <button class="button"
             ng-click="artwork.destroyArtwork(artwork.data)"
-            ui-sref="artworks.search"
+            ui-sref="search"
             ui-sref-opts="{reload: true}">
             Destroy Artwork
     </button>
 
     <button class="button"
-            ui-sref="artworks.edit({id: artwork.data.id})">
+            ui-sref="edit({id: artwork.data.id})">
             Edit Artwork
     </button>
