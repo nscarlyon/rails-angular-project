@@ -1,3 +1,5 @@
-<div ng-repeat="artist in artists.data">
-  {{artist.name}}
+<h1>Artist Index</h1>
+
+<div ng-repeat="artist in artists.data | unique: 'name'">
+  <a ui-sref="artistShow({id: artist.id})">{{artist.name}}</a>
 </div>
