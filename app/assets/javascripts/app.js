@@ -69,20 +69,6 @@ angular
           }
         }
       })
-      .state('artists', {
-        url: '/artists/:id',
-        templateUrl: 'artists/show.html',
-        controller: 'ArtistShowController as artist',
-        resolve: {
-          artist: function($stateParams, Artist) {
-            return Artist.getArtist($stateParams.id)
-          }
-        }
-      })
-      .state('artists.artworks', {
-        url: '/artworks',
-        templateUrl: 'artists/artworks.html'
-      })
 
       $urlRouterProvider.otherwise('/');
   })
