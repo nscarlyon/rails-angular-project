@@ -16,8 +16,8 @@ angular
           }
         }
       })
-      .state('artworks.search', {
-        url: '/search',
+      .state('search', {
+        url: '/artworks/search',
         templateUrl: 'artworks/search.html',
         controller: 'ArtworksController as artworks',
         resolve: {
@@ -26,8 +26,8 @@ angular
           }
         }
       })
-      .state('artworks.new', {
-        url: '/new',
+      .state('new', {
+        url: '/artworks/new',
         templateUrl: 'artworks/form.html',
         controller: 'ArtworkNewController as artwork',
         resolve: {
@@ -43,8 +43,8 @@ angular
           }
         }
       })
-      .state('artworks.edit', {
-        url: '/:id/edit',
+      .state('edit', {
+        url: '/artworks/:id/edit',
         templateUrl: 'artworks/form.html',
         controller: 'ArtworkEditController as artwork',
         resolve: {
@@ -59,8 +59,8 @@ angular
           }
         }
       })
-      .state('artworks.show', {
-        url: '/:id',
+      .state('show', {
+        url: 'artworks/:id',
         templateUrl: 'artworks/show.html',
         controller: 'ArtworkShowController as artwork',
         resolve: {
