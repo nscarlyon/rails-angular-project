@@ -2,13 +2,13 @@ angular
   .module('app')
   .controller('ArtworkNewController', ArtworkNewController)
 
-  function ArtworkNewController(artwork, $scope, movements, Artwork) {
+  function ArtworkNewController(artwork, $scope, movements, artists, Artwork) {
     var vm = this;
     vm.data = artwork
     vm.data.movements = []
     vm.selection = [];
-
     vm.movements = movements.data.movements;
+    vm.artists = artists.data.artists;
     vm.toggleSelection = toggleSelection;
     vm.submitArtwork = submitArtwork;
 
