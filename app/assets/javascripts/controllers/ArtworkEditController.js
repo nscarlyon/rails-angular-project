@@ -2,7 +2,7 @@ angular
   .module('app')
   .controller('ArtworkEditController', ArtworkEditController)
 
-  function ArtworkEditController(artwork, $scope, movements, Artwork) {
+  function ArtworkEditController(artwork, artists, $scope, movements, Artwork) {
     var vm = this;
     vm.data = artwork.data["artwork"];
     vm.artists = artists.data.artists;
