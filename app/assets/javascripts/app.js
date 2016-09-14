@@ -60,7 +60,7 @@ angular
         }
       })
       .state('show', {
-        url: 'artworks/:id',
+        url: '/artworks/:id',
         templateUrl: 'artworks/show.html',
         controller: 'ArtworkShowController as artwork',
         resolve: {
