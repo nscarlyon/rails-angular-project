@@ -12,8 +12,14 @@ angular
     vm.data = artwork
     vm.data.movements = []
 
+      } else {
+        vm.data = artwork.data["artwork"];
 
-
+        vm.data.movements.forEach(function(movement) {
+          vm.selection.push(movement.id);
+        });
+      }
+    }
 
     function movementChecked(id) {
       var value;
