@@ -15,7 +15,7 @@
   </p>
 
   Select an Artist
-  <select ng-model="artwork.data.artist" ng-options="x.name for x in artwork.artists">
+  <select ng-model="artwork.data.artist" ng-options="x.name for x in artwork.artists | unique: 'name'">
   </select>
 
   <p>
