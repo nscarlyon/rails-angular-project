@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router', 'templates', 'ngMessages'])
+  .module('app', ['ui.router', 'templates', 'ngMessages', 'artistApp'])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

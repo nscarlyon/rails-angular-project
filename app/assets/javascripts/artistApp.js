@@ -2,7 +2,7 @@ angular
   .module('artistApp', ['ui.router', 'templates', 'ngMessages'])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
-    .state('show', {
+    .state('artistShow', {
       url: '/artists/:id',
       templateUrl: 'artists/show.html',
       controller: 'ArtistShowController as artist',
@@ -12,9 +12,9 @@ angular
         }
       }
     })
-    .state('show.artworks', {
+    .state('artistShow.artworks', {
       url: '/artworks',
       templateUrl: 'artists/artworks.html'
     })
 
-  }
+  })
