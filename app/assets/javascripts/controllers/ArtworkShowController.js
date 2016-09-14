@@ -2,11 +2,11 @@ angular
   .module('app')
   .controller('ArtworkShowController', ArtworkShowController)
 
-  function ArtworkShowController(artwork, $scope, $http, Artwork, $state) {
+  function ArtworkShowController(artwork, $scope, Artwork) {
     this.data = artwork.data["artwork"]
 
-    $scope.updateDateSeen = function($scope) {
-      $http.patch('http://localhost:3000/artworks/' + $scope.id, $scope)
+    $scope.updateDateSeen = function(artwork) {
+      Artwork.updateArtwork(artwork)
     }
 
     $scope.destroyArtwork = function($scope) {
