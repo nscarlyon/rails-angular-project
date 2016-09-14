@@ -37,6 +37,9 @@ angular
           },
           movements: function(Movements) {
             return Movements.getMovements()
+          },
+          artists: function(Artist) {
+            return Artist.getArtists()
           }
         }
       })
@@ -50,6 +53,9 @@ angular
           },
           movements: function(Movements) {
             return Movements.getMovements()
+          },
+          artists: function(Artist) {
+            return Artist.getArtists()
           }
         }
       })
