@@ -9,7 +9,7 @@ class ArtworksController < ApplicationController
 
   def create
     artwork = Artwork.new(artwork_params)
-    artist = Artist.find_by(name: params["artist"]["name"])
+    artist = Artist.find_by(name: params["artist"]["name"].titleize)
 
     if !artist
       artwork.artist = Artist.new(artist_params)
@@ -20,7 +20,7 @@ class ArtworksController < ApplicationController
     artwork.movement_ids = params["movements"]
 
     if params["movement"] && params["movement"] != ""
-      artwork.movements << Movement.find_or_create_by(name: params["movement"].capitalize)
+      artwork.movements << Movement.find_or_create_by(name: params["movement"].titleize)
     end
     artwork.save
   end
@@ -36,12 +36,12 @@ class ArtworksController < ApplicationController
   def update
     artwork = Artwork.find(params[:id])
     artwork.update(artwork_params)
-    artwork.artist = Artist.find_or_create_by(name: params["artist"]["name"])
+    artwork.artist = Artist.find_or_create_by(name: params["artist"]["name"].titleize)
     artwork.artist.update(artist_params)
     artwork.movement_ids = params["movements"]
 
     if params["movement"] && params["movement"] != ""
-      artwork.movements << Movement.find_or_create_by(name: params["movement"].titlelize)
+      artwork.movements << Movement.find_or_create_by(name: params["movement"].titleize)
     end
 
     artwork.save
