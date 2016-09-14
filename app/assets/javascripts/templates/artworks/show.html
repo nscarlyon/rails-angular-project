@@ -7,7 +7,7 @@
   <input type="text"
   ng-model="artwork.data.date_seen"
   ng-model-options='{ debounce: 1000 }'
-  ng-change="updateDateSeen(artwork.data)"/>
+  ng-change="artwork.updateDateSeen(artwork.data)"/>
 
   <h3>Movements</h3>
     <ul>
@@ -17,10 +17,10 @@
     </ul>
 
     <button class="button"
-      ng-click="destroyArtwork(artwork.data)"
+      ng-click="artwork.destroyArtwork(artwork.data)"
       ui-sref="artworks.search"
       ui-sref-opts="{reload: true}">
       Destroy Artwork
     </button>
-    
+
     <button class="button" ui-sref="artworks.edit({id: artwork.data.id})">Edit Artwork</button>
