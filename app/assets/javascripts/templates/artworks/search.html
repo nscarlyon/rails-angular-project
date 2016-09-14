@@ -23,7 +23,7 @@
                   | orderBy: 'title' ">
 
       <td><a ui-sref="show({id: artwork.id})">{{artwork.title}}</a></td>
-      <td><a ui-sref="artists({id: artwork.artist_id})">{{artwork.artist.name}}</a></td>
+      <td><a ui-sref="artistShow({id: artwork.artist_id})">{{artwork.artist.name}}</a></td>
       <td>
           <div ng-repeat="movement in artwork.movements">
             {{movement.name}}
