@@ -5,6 +5,7 @@ angular
   function ArtworkEditController(artwork, $scope, movements, Artwork) {
     var vm = this;
     vm.data = artwork.data["artwork"];
+    vm.movements = movements.data.movements;
     vm.selection = [];
 
     vm.movementChecked =  movementChecked;

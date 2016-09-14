@@ -9,7 +9,14 @@ class ArtworksController < ApplicationController
 
   def create
     artwork = Artwork.new(artwork_params)
-    artwork.artist = Artist.find_or_create_by(artist_params)
+    artist = Artist.find_by(name: params["artist"]["name"])
+
+    if !artist
+      artwork.artist = Artist.new(artist_params)
+    else
+      artwork.artist = artist
+    end
+
     artwork.movement_ids = params["movements"]
 
     if params["movement"] && params["movement"] != ""
