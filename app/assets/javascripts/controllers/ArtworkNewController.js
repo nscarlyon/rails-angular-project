@@ -4,27 +4,16 @@ angular
 
   function ArtworkFormController(artwork, $scope, movements, Artwork) {
     var vm = this;
-    vm.data = null;
     vm.selection = [];
     vm.movements = movements.data.movements;
     vm.movementChecked =  movementChecked;
     vm.toggleSelection = toggleSelection;
     vm.submitArtwork = submitArtwork;
+    vm.data = artwork
+    vm.data.movements = []
 
-    defineArtwork()
 
-    function defineArtwork() {
-      if(Object.keys(artwork).length === 0) {
-        vm.data = artwork;
-        vm.data.movements = []
-      } else {
-        vm.data = artwork.data["artwork"];
 
-        vm.data.movements.forEach(function(movement) {
-          vm.selection.push(movement.id);
-        });
-      }
-    }
 
     function movementChecked(id) {
       var value;
