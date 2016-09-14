@@ -1,5 +1,5 @@
 angular
-  .module('app')
+  .module('artistApp')
   .controller('ArtistIndexController', ArtistIndexController)
 
   function ArtistIndexController(artists) {
