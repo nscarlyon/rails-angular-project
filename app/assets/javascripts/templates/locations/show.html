@@ -2,5 +2,5 @@
 
 <h3>Artworks</h3>
 <div ng-repeat="artwork in location.artworks | filter: location.data">
-  {{artwork.title}}
+  <a ui-sref="show({id: artwork.id})">{{artwork.title}}</a>
 </div>
