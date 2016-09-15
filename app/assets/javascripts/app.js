@@ -59,6 +59,20 @@ angular
           }
         }
       })
+      .state('location', {
+        url: '/locations/:name',
+        templateUrl: 'locations/show.html',
+        controller: 'LocationShowController as location',
+        resolve: {
+          location: function($stateParams) {
+            var location = $stateParams.name
+            return location;
+          },
+          artworks: function(Artwork) {
+            return Artwork.getArtworks()
+          }
+        }
+      })
 
       $urlRouterProvider.otherwise('/');
   })
