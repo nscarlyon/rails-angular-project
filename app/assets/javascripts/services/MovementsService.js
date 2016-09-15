@@ -3,8 +3,8 @@ function Movements($http) {
     return $http.get('http://localhost:3000/movements.json')
   }
 
-  this.createMovement = function() {
-    return $http.post('http://localhost:3000/movements')
+  this.createMovement = function(artwork) {
+    return $http.post('http://localhost:3000/movements', artwork)
   }
 }
 
