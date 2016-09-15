@@ -9,6 +9,10 @@ angular
       Artwork.updateArtwork(artwork)
     }
 
+    this.addMovement = function(artwork) { 
+      Artwork.updateArtwork(artwork)
+    }
+
     this.destroyArtwork = function($scope) {
       Artwork.destroyArtwork($scope.id)
       alert("artwork successfully deleted!")
