@@ -1,5 +1,5 @@
 <h1>Searching for {{location.data}}</h1>
 
-<div ng-repeat="artwork in location.artworks | filter: 'location'">
+<div ng-repeat="artwork in location.artworks | filter: location.data">
   {{artwork.title}}
 </div>
