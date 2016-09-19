@@ -2,7 +2,7 @@ angular
   .module('app')
   .controller('ArtworkShowController', ArtworkShowController)
 
-  function ArtworkShowController(artwork, $scope, Artwork, Movements) {
+  function ArtworkShowController(artwork, $scope, Artwork, Movement) {
     this.data = artwork.data["artwork"]
 
     this.updateDateSeen = function(artwork) {
