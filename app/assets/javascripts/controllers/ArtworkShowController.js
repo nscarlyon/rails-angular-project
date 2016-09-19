@@ -10,7 +10,7 @@ angular
     }
 
     this.addMovement = function(artwork) {
-      Movements.createMovement(artwork)
+      Movement.createMovement(artwork)
     }
 
     this.destroyArtwork = function($scope) {

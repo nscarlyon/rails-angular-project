@@ -25,8 +25,8 @@ angular
             var artwork = {}
             return artwork
           },
-          movements: function(Movements) {
-            return Movements.getMovements()
+          movements: function(Movement) {
+            return Movement.getMovements()
           },
           artists: function(Artist) {
             return Artist.getArtists()
@@ -41,8 +41,8 @@ angular
           artwork: function($stateParams, Artwork) {
             return Artwork.getArtwork($stateParams.id)
           },
-          movements: function(Movements) {
-            return Movements.getMovements()
+          movements: function(Movement) {
+            return Movement.getMovements()
           },
           artists: function(Artist) {
             return Artist.getArtists()
