@@ -1,3 +1,7 @@
+angular
+  .module('app')
+  .service('Artwork', Artwork)
+  
 function Artwork($http) {
 
   this.getArtworks = function() {
@@ -20,7 +24,3 @@ function Artwork($http) {
     $http.patch('http://localhost:3000/artworks/' + artwork.id, artwork)
   }
 }
-
-angular
-  .module('app')
-  .service('Artwork', Artwork)

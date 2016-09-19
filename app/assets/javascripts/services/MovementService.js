@@ -1,3 +1,7 @@
+angular
+  .module('app')
+  .service('Movement', Movement)
+  
 function Movement($http) {
   this.getMovements = function() {
     return $http.get('http://localhost:3000/movements.json')
@@ -7,7 +11,3 @@ function Movement($http) {
     return $http.post('http://localhost:3000/movements', artwork)
   }
 }
-
-angular
-  .module('app')
-  .service('Movement', Movement)

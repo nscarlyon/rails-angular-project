@@ -1,3 +1,7 @@
+angular
+  .module('app')
+  .service('Artist', Artist)
+  
 function Artist($http) {
 
   this.getArtists = function() {
@@ -9,7 +13,3 @@ function Artist($http) {
   }
 
 }
-
-angular
-  .module('app')
-  .service('Artist', Artist)
