@@ -29,10 +29,12 @@
         <input type="text"
                placeholder="Add New Movement"
                ng-model="artwork.data.movement" />
-        <button class="button"
-                ng-click="artwork.addMovement(artwork.data)">
-                Save Movement
-        </button>
+               
+        <a ng-click="artwork.addMovement(artwork.data)"
+            ui-sref="show({id: artwork.data.id})"
+            ui-sref-opts="{reload: true}">
+            Save Movement
+        </a>
       </li>
     </ul>
 
