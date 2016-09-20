@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :artworks, :artists, :movements
 
   root 'welcome#index'
+
+  get 'locations/:location', to:'artworks#location'
 end

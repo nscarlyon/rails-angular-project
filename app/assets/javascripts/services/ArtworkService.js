@@ -1,7 +1,7 @@
 angular
   .module('app')
   .service('Artwork', Artwork)
-  
+
 function Artwork($http) {
 
   this.getArtworks = function() {
@@ -10,6 +10,10 @@ function Artwork($http) {
 
   this.getArtwork = function(id) {
     return $http.get('http://localhost:3000/artworks/' + id + '.json')
+  }
+
+  this.getArtworksLocation = function(location) {
+    return $http.get('http://localhost:3000/locations/' + location)
   }
 
   this.destroyArtwork = function(id) {

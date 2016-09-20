@@ -1,10 +1,26 @@
 class ArtworksController < ApplicationController
+  #require 'byebug'
 
   skip_before_action  :verify_authenticity_token
 
   def index
     artworks = Artwork.all
     render json: artworks
+  end
+
+  def location
+    location = params["location"]
+    artworks = Artwork.all
+    artworks_list = []
+
+    artworks.each do |a|
+      if a.location.downcase == location
+        artworks_list << a
+      end
+    end
+
+    render json: artworks_list
+
   end
 
   def create

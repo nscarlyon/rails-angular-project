@@ -68,8 +68,8 @@ angular
             var location = $stateParams.name
             return location;
           },
-          artworks: function(Artwork) {
-            return Artwork.getArtworks()
+          artworks: function(Artwork, $stateParams) {
+            return Artwork.getArtworksLocation($stateParams.name.toLowerCase())
           }
         }
       })
