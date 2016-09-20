@@ -2,9 +2,10 @@
 
   Title: <input ng-model="title">
   Artist Name: <input ng-model="artistName">
-  Movement: <input ng-model="movement">
+  Movement: <input ng-model="movement"> <br>
+  Medium: <input ng-model="medium">
   Location: <input ng-model="location">
-  Date Seen: <input ng-model="dateSeen"><br>
+  Date Seen: <input ng-model="dateSeen">
 
   <table>
 
@@ -18,7 +19,7 @@
     </tr>
 
     <tr ng-repeat="artwork in artworks.data | filter: {title: title,
-                  location: location, date_seen: dateSeen,
+                  location: location, date_seen: dateSeen, medium: medium,
                   artist: {name: artistName}, movements: {name: movement}}
                   | orderBy: 'title' ">
 
