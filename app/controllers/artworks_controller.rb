@@ -1,5 +1,7 @@
 class ArtworksController < ApplicationController
 
+  skip_before_action  :verify_authenticity_token
+
   def index
     artworks = Artwork.all
     render json: artworks
