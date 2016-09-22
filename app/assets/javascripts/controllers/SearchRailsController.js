@@ -2,9 +2,9 @@ angular
   .module('app')
   .controller('SearchRailsController', SearchRailsController)
 
-  function SearchRailsController(ArtworkService, $scope) {
+  function SearchRailsController(Artwork, $scope) {
 
     this.submit = function() {
-      return ArtworkService.getArtworksLocation($scope.location)
+      return Artwork.getArtworksLocation($scope.location)
     }
   }
