@@ -2,8 +2,9 @@ angular
   .module('app')
   .controller('SearchRailsController', SearchRailsController)
 
-  function SearchRailsController(Artwork) {
+  function SearchRailsController(Artwork, artworks) {
     var vm = this
+    vm.artworks = artworks.data.artworks
 
     this.submit = function(location, movement, title) {
       l = location.toLowerCase()

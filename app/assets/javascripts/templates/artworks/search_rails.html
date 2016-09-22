@@ -16,7 +16,7 @@
       <th>Date Seen</th>
     </tr>
 
-    <tr ng-repeat="artwork in search.artworks ">
+    <tr ng-repeat="artwork in search.artworks">
 
       <td><a ui-sref="show({id: artwork.id})">{{artwork.title}}</a></td>
       <td><a ui-sref="artistShow({id: artwork.artist_id})">{{artwork.artist.name}}</a></td>
