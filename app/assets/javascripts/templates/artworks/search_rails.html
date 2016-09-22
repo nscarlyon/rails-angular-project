@@ -1,9 +1,13 @@
 <p>Type in one or more of the search fields to filter artworks:</p>
 
+<div>
   Title: <input ng-model="title">
   Movement: <input ng-model="movement">
   Location: <input ng-model="location">
   <button class="button" ng-click="search.submit(location, movement, title)">Submit</button>
+</div>
+
+<p class="errors">{{search.message}}</p>
 
   <table>
 
