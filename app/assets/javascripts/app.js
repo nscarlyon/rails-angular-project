@@ -73,6 +73,9 @@ angular
           }
         }
       })
-
+      .state('searchRails', {
+        url: '/artworks/search_rails.html',
+        controller: 'SearchRailsController as search'
+      })
       $urlRouterProvider.otherwise('/');
   })
