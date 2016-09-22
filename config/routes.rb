@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'locations/:location', to:'artworks#location'
+  get 'artworks/search/:location/:movement/:title', to: 'artworks#search'
 end

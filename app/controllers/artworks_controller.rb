@@ -8,6 +8,10 @@ class ArtworksController < ApplicationController
     render json: artworks
   end
 
+  def search
+    render text: "hello" 
+  end
+
   def location
     location = params["location"]
     artworks = Artwork.all
@@ -20,7 +24,6 @@ class ArtworksController < ApplicationController
     end
 
     render json: artworks_list
-
   end
 
   def create
