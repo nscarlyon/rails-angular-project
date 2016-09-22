@@ -5,6 +5,8 @@ angular
   function SearchRailsController(Artwork, $scope) {
 
     this.submit = function() {
-      return Artwork.getArtworksLocation($scope.location)
+       Artwork.getArtworksLocation($scope.location).success(function(res) {
+         $scope.artworks = res
+       })
     }
   }
