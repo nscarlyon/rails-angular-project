@@ -19,7 +19,12 @@ angular
       .state('searchRails', {
         url: '/artworks/search_rails',
         templateUrl: 'artworks/search_rails.html',
-        controller: 'SearchRailsController as search'
+        controller: 'SearchRailsController as search',
+        resolve: {
+          artworks: function(Artwork) {
+            return Artwork.getArtworks()
+          }
+        }
       })
       .state('new', {
         url: '/artworks/new',
