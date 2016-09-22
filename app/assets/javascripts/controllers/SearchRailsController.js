@@ -13,6 +13,8 @@ angular
 
        Artwork.searchRails(l, m, t).success(function(res) {
          vm.artworks = res.artworks
+       }).error(function(err) {
+         vm.message = "Invalid artwork"
        })
     }
   }
