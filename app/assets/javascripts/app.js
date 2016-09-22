@@ -16,6 +16,11 @@ angular
           }
         }
       })
+      .state('searchRails', {
+        url: '/artworks/search_rails',
+        templateUrl: 'artworks/search_rails.html',
+        controller: 'SearchRailsController as search'
+      })
       .state('new', {
         url: '/artworks/new',
         templateUrl: 'artworks/form.html',
@@ -72,10 +77,6 @@ angular
             return Artwork.getArtworksLocation($stateParams.name.toLowerCase())
           }
         }
-      })
-      .state('searchRails', {
-        url: '/artworks/search_rails.html',
-        controller: 'SearchRailsController as search'
       })
       $urlRouterProvider.otherwise('/');
   })
