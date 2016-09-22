@@ -2,7 +2,7 @@ angular
   .module('app')
   .controller('SearchRailsController', SearchRailsController)
 
-  function SearchRailsController(Artwork, artworks) {
+  function SearchRailsController(Artwork, artworks, $state) {
     var vm = this
     vm.artworks = artworks.data.artworks
 
@@ -14,7 +14,7 @@ angular
        Artwork.searchRails(l, m, t).success(function(res) {
          vm.artworks = res.artworks
        }).error(function(err) {
-         vm.message = "Invalid artwork"
+         $state.reload()
        })
     }
   }
