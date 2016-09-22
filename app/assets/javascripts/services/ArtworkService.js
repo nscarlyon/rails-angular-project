@@ -16,6 +16,10 @@ function Artwork($http) {
     return $http.get('http://localhost:3000/locations/' + location)
   }
 
+  this.searchRails = function(location, movement, title) {
+    return $http.get('http://localhost:3000/artworks/search/' + location + '/' + movement + '/' + title)
+  }
+
   this.destroyArtwork = function(id) {
     return $http.delete('http://localhost:3000/artworks/' + id)
   }
