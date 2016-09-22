@@ -9,7 +9,22 @@ class ArtworksController < ApplicationController
   end
 
   def search
-    render text: "hello" 
+    location = params["location"]
+    movement = params["movement"]
+    title = params["title"]
+    artworks = Artwork.all
+    artworks_list = []
+
+    artworks.each do |a|
+      has_movement = a.movements.any? {|m| m.name.downcase == movement}
+      slug_title = a.title.downcase.gsub(/\s/, '-')
+
+      if a.location.downcase == location && has_movement && slug_title == title
+        artworks_list << a
+      end
+    end
+    
+    render json: artworks_list
   end
 
   def location
