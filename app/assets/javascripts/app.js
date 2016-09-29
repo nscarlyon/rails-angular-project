@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router', 'templates', 'ngMessages', 'artistApp'])
+  .module('app', ['ui.router', 'templates', 'ngMessages', 'artistApp', 'angular.filter'])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -13,6 +13,9 @@ angular
         resolve: {
           artworks: function(Artwork) {
             return Artwork.getArtworks()
+          },
+          movements: function(Movement) {
+            return Movement.getMovements()
           }
         }
       })

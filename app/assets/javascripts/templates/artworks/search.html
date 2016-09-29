@@ -1,11 +1,19 @@
-<p>Type in one or more of the search fields to filter artworks:</p>
+  <p>
+  Filter by Movement: <select ng-model="filterMovements"
+                              ng-options="option.name for option in artworks.movements track by option.name" />
+  </p>
 
-  Title: <input ng-model="title">
-  Artist Name: <input ng-model="artistName">
-  Movement: <input ng-model="movement"> <br>
-  Medium: <input ng-model="medium">
-  Location: <input ng-model="location">
-  Date Seen: <input ng-model="dateSeen">
+  <p>
+    <select ng-model="filterInput" required>
+    <option value="">Select Property</option>
+    <option value="title">Title</option>
+    <option value="artist.name">Artist</option>
+    <option value="medium">Medium</option>
+    <option value="location">Location</option>
+    <option value="date_seen">Date Seen</option>
+
+    <input ng-model="searchInput" placeholder="search Input">
+  </p>
 
   <table>
 
@@ -18,10 +26,7 @@
       <th>Date Seen</th>
     </tr>
 
-    <tr ng-repeat="artwork in artworks.data | filter: {title: title,
-                  location: location, date_seen: dateSeen, medium: medium,
-                  artist: {name: artistName}, movements: {name: movement}}
-                  | orderBy: 'title' ">
+    <tr ng-repeat="artwork in artworks.data | filterBy: [filterInput]: searchInput | filter: {movements: {name: filterMovements.name}} | orderBy: 'title' ">
 
       <td><a ui-sref="show({id: artwork.id})">{{artwork.title}}</a></td>
       <td><a ui-sref="artistShow({id: artwork.artist_id})">{{artwork.artist.name}}</a></td>

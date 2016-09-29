@@ -14,5 +14,6 @@
 //= require angular
 //= require angular-ui-router
 //= require angular-rails-templates
+//= require angular-filter.min
 //= require_tree .
 //= require_tree ./filters

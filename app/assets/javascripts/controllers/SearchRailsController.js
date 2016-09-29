@@ -8,7 +8,7 @@ angular
 
     this.submit = function(location, movement, title) {
       l = location.toLowerCase()
-      m = movement.toLowerCase()
+      m = movement.toLowerCase().replace(/ /g, '-')
       t = title.toLowerCase().replace(/ /g, '-')
 
        Artwork.searchRails(l, m, t).success(function(res) {
