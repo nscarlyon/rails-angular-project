@@ -1,15 +1,15 @@
 angular
   .module('app')
   .service('Artist', Artist)
-  
+
 function Artist($http) {
 
   this.getArtists = function() {
-    return $http.get('http://localhost:3000/artists')
+    return $http.get('/artists')
   }
 
   this.getArtist = function(id) {
-    return $http.get('http://localhost:3000/artists/' + id + '.json')
+    return $http.get('/artists/' + id + '.json')
   }
 
 }

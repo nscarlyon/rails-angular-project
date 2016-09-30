@@ -16571,15 +16571,15 @@ angular.module('app').filter('unique', function () {
 angular
   .module('app')
   .service('Artist', Artist)
-  
+
 function Artist($http) {
 
   this.getArtists = function() {
-    return $http.get('http://localhost:3000/artists')
+    return $http.get('/artists')
   }
 
   this.getArtist = function(id) {
-    return $http.get('http://localhost:3000/artists/' + id + '.json')
+    return $http.get('/artists/' + id + '.json')
   }
 
 }
@@ -16591,45 +16591,45 @@ angular
 function Artwork($http) {
 
   this.getArtworks = function() {
-    return $http.get('http://localhost:3000/artworks')
+    return $http.get('/artworks')
   }
 
   this.getArtwork = function(id) {
-    return $http.get('http://localhost:3000/artworks/' + id + '.json')
+    return $http.get('/artworks/' + id + '.json')
   }
 
   this.getArtworksLocation = function(location) {
-    return $http.get('http://localhost:3000/locations/' + location)
+    return $http.get('/locations/' + location)
   }
 
   this.searchRails = function(location, movement, title) {
-    return $http.get('http://localhost:3000/artworks/search/' + location + '/' + movement + '/' + title)
+    return $http.get('/artworks/search/' + location + '/' + movement + '/' + title)
   }
 
   this.destroyArtwork = function(id) {
-    return $http.delete('http://localhost:3000/artworks/' + id)
+    return $http.delete('/artworks/' + id)
   }
 
   this.createArtwork = function(artwork) {
-    $http.post('http://localhost:3000/artworks', artwork)
+    $http.post('/artworks', artwork)
   }
 
   this.updateArtwork = function(artwork) {
-    $http.patch('http://localhost:3000/artworks/' + artwork.id, artwork)
+    $http.patch('/artworks/' + artwork.id, artwork)
   }
 }
 ;
 angular
   .module('app')
   .service('Movement', Movement)
-  
+
 function Movement($http) {
   this.getMovements = function() {
-    return $http.get('http://localhost:3000/movements.json')
+    return $http.get('/movements.json')
   }
 
   this.createMovement = function(artwork) {
-    return $http.post('http://localhost:3000/movements', artwork)
+    return $http.post('/movements', artwork)
   }
 }
 ;
