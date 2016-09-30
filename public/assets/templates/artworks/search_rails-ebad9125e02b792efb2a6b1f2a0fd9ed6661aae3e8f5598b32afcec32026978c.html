@@ -1,0 +1,35 @@
+<p>Type in one or more of the search fields to filter artworks:</p>
+
+<div>
+  Title: <input ng-model="title">
+  Movement: <input ng-model="movement">
+  Location: <input ng-model="location">
+  <button class="button" ng-click="search.submit(location, movement, title)">Submit</button>
+</div>
+
+  <table>
+
+    <tr>
+      <th>Title</th>
+      <th>Artist Name</th>
+      <th>Associated Art Movements</ht>
+      <th>Medium</ht>
+      <th>Location</th>
+      <th>Date Seen</th>
+    </tr>
+
+    <tr ng-repeat="artwork in search.artworks">
+
+      <td><a ui-sref="show({id: artwork.id})">{{artwork.title}}</a></td>
+      <td><a ui-sref="artistShow({id: artwork.artist_id})">{{artwork.artist.name}}</a></td>
+      <td>
+          <div ng-repeat="movement in artwork.movements">
+            {{movement.name}}
+          </div>
+      </td>
+      <td>{{artwork.medium}}</td>
+      <td><a ui-sref="location({name: artwork.location})">{{artwork.location}}</a></td>
+      <td>{{artwork.date_seen}}</td>
+    </tr>
+
+</table>

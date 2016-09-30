@@ -1,0 +1,122 @@
+/* line 5, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/layout.scss */
+h1 {
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #b93a32;
+}
+
+/* line 12, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/layout.scss */
+h3 {
+  color: #b93a32;
+}
+
+/* line 16, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/layout.scss */
+body {
+  color: #b93a32;
+}
+
+/* line 20, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/layout.scss */
+.button {
+  background: #932f28;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* line 26, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/layout.scss */
+.errors {
+  font-weight: bolder;
+  color: #6e241e;
+}
+/* line 5, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/navigation.scss */
+.header {
+  height: 47px;
+}
+
+/* line 9, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/navigation.scss */
+.header__fixed {
+  background: #6e241e;
+  border-bottom: 1px solid #5c1e19;
+  position: fixed;
+  height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 19, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/navigation.scss */
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/navigation.scss */
+.header a {
+  display: block;
+  padding: 14px 15px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  float: left;
+}
+
+/* line 33, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/navigation.scss */
+.header a.active {
+  background: #932f28;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* line 39, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/navigation.scss */
+a {
+  color: #b93a32;
+  font-weight: bold;
+}
+
+/* line 44, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/navigation.scss */
+a.active {
+  color: #b93a32;
+  font-weight: bold;
+}
+/* line 6, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/table.scss */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #5c1e19;
+  border-radius: 5px;
+  margin: 50px 0;
+}
+
+/* line 14, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/table.scss */
+th {
+  background: #932f28;
+  border-bottom: 2px solid #5c1e19;
+  color: #fff;
+  text-align: left;
+}
+
+/* line 21, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/table.scss */
+tr:nth-child(even) {
+  background: #f3d6d4;
+}
+
+/* line 25, /home/flatironschool/Development/code/rails-angular-project/app/assets/stylesheets/table.scss */
+tr:nth-child(odd) {
+  background: #FFF;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

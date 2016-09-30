@@ -1,0 +1,122 @@
+
+<form name="form">
+  <p>
+    <label>Title</label>
+    <input name="title"
+            minlength="2"
+            ng-model="artwork.data.title"
+            required="required" />
+
+
+    <div class="errors" ng-messages="form.title.$error" ng-if="form.title.$touched">
+      <span ng-message="required">Title is required!</span>
+      <span ng-message="minlength">Must be more than 2 characters!</span>
+    </div>
+  </p>
+
+  Select an Artist
+  <select ng-model="artwork.data.artist" ng-options="x.name for x in artwork.artists | unique: 'name'">
+  </select>
+
+  <p>
+    Or Create an Artist<br>
+    <label>Artist Name</label>
+    <input name="artistName"
+           minlength="2"
+           ng-model="artwork.data.artist.name"
+           required="required" />
+
+    <div class="errors" ng-messages="form.artistName.$error" ng-if="form.artistName.$touched">
+      <span ng-message="required">Artist name is required!</span>
+      <span ng-message="minlength">Must be more than 2 characters!</span>
+    </div>
+  </p>
+
+  Please write the date in this format: dd/mm/yyyy
+  <p>
+    <label>Date of Birth</label>
+    <input name="artistDob"
+           ng-model="artwork.data.artist.dob"
+           ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{4}$/" />
+
+    <div class="errors" ng-messages="form.artistDob.$error" ng-if="form.artistDob.$touched">
+      <span ng-message="pattern">Must be a valid date: dd/mm/yyyy!</span>
+    </div>
+  </p>
+
+Please write the date in this format: dd/mm/yyyy
+  <p>
+    <label>Date of Death</label>
+    <input name="artistDod"
+           ng-model="artwork.data.artist.dod"
+           ng-pattern="/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/\d{4}$/"  />
+
+    <div class="errors" ng-messages="form.artistDod.$error" ng-if="form.artistDod.$touched">
+      <span ng-message="pattern">Must be a valid date: dd/mm/yyyy!</span>
+    </div>
+  </p>
+
+  <p>
+    <label>Medium</label>
+    <input name="medium"
+           minlength="2"
+           ng-model="artwork.data.medium"
+           required="required" />
+
+    <div class="errors" ng-messages="form.medium.$error" ng-if="form.medium.$touched">
+      <span ng-message="required">Medium is required!</span>
+      <span ng-message="minlength">Must be more than 2 characters!</span>
+    </div>
+  </p>
+
+  <p>
+    <label>Location</label>
+    <input name="location"
+           minlength="2"
+           ng-model="artwork.data.location"
+           required="required" />
+
+    <div class="errors" ng-messages="form.location.$error" ng-if="form.location.$touched">
+      <span ng-message="required">Location is required!</span>
+      <span ng-message="minlength">Must be more than 2 characters!</span>
+    </div>
+  </p>
+
+  <p>
+    <label>Date Seen</label>
+    <input name="dateSeen"
+           ng-model="artwork.data.date_seen" />
+  </p>
+
+  <p>
+    <label>Select Movement(s)</label>
+
+    <div ng-repeat="movement in artwork.movements">
+      {{movement.name}}
+      <input id="movement.id"
+             ng-checked="artwork.movementChecked(movement.id)"
+             ng-true-value="movement.id"
+             type="checkbox"
+             ng-click="artwork.toggleSelection(movement.id)" />
+    </div>
+  </p>
+
+  <p>
+    <label>Or Add New Movement</label>
+    <input name="movement"
+           minlength="2"
+           ng-model="artwork.data.movement" />
+
+    <div class="errors" ng-messages="form.movement.$error" ng-if="form.movement.$touched">
+      <span ng-message="minlength">Must be more than 2 characters!</span>
+    </div>
+  </p>
+
+  <p>
+    <input type="submit" value="submit"
+      ng-click="artwork.submitArtwork(artwork.data)"
+      ui-sref="search"
+      ui-sref-opts="{reload: true}"
+      ng-disabled="(form.$invalid && form.$dirty) || form.$pristine">
+  </p>
+</form>

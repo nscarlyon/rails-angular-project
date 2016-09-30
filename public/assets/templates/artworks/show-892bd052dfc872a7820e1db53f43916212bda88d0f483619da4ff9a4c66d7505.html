@@ -1,0 +1,51 @@
+<h1>{{artwork.data.title}}</h1>
+
+  <h3>Artist Name</h3>
+  <a ui-sref="artistShow({id: artwork.data.artist_id})">
+    {{artwork.data.artist.name}}
+  </a>
+
+  <h3>Medium</h3>
+    {{artwork.data.medium}}
+
+  <h3>Location</h3>
+  <a ui-sref="location({name: artwork.data.location})">{{artwork.data.location}}</a>
+
+  <h3>Date Seen</h3>
+    {{artwork.data.date_seen}}
+
+  <input type="text"
+         ng-model="artwork.data.date_seen"
+         ng-model-options='{ debounce: 1000 }'
+         ng-change="artwork.updateDateSeen(artwork.data)"/>
+
+  <h3>Movements</h3>
+    <ul>
+      <li ng-repeat="movement in artwork.data.movements">
+        {{movement.name}}
+      </li>
+      <li>
+        {{artwork.data.movement}}
+        <input type="text"
+               placeholder="Add New Movement"
+               ng-model="artwork.data.movement" />
+
+        <a ng-click="artwork.addMovement(artwork.data)"
+            ui-sref="show({id: artwork.data.id})"
+            ui-sref-opts="{reload: true}">
+            Save Movement
+        </a>
+      </li>
+    </ul>
+
+    <button class="button"
+            ng-click="artwork.destroyArtwork(artwork.data)"
+            ui-sref="search"
+            ui-sref-opts="{reload: true}">
+            Destroy Artwork
+    </button>
+
+    <button class="button"
+            ui-sref="edit({id: artwork.data.id})">
+            Edit Artwork
+    </button>
