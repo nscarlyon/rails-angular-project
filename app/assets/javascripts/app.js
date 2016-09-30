@@ -1,6 +1,8 @@
 angular
   .module('app', ['ui.router', 'templates', 'ngMessages', 'artistApp', 'angular.filter'])
-  .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config([ '$stateProvider', '$urlRouterProvider', '$locationProvider',
+    function($stateProvider, $urlRouterProvider, $locationProvider) {
+
     $stateProvider
       .state('home', {
         url: '/',
@@ -89,4 +91,4 @@ angular
       $urlRouterProvider.otherwise('/');
 
       $locationProvider.html5Mode(true)
-  })
+  }])
