@@ -1,6 +1,7 @@
 angular
   .module('artistApp', ['ui.router', 'templates', 'ngMessages'])
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('artistIndex', {
       url: '/artists',
@@ -27,4 +28,4 @@ angular
       templateUrl: 'artists/artworks.html'
     })
 
-  })
+  }])
