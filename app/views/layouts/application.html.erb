@@ -13,29 +13,15 @@
     <base href="/">
   </head>
 
+<div class="container-fluid" id="main">
   <body ng-app="app">
-    <div class="header">
-	    <div class="header__fixed">
-		    <ul>
-          <li>
-            <a ui-sref="home" ui-sref-active="active">Home</a>
-          </li>
-          <li>
-            <a ui-sref="search" ui-sref-active="active">Search</a>
-          </li>
-          <li>
-            <a ui-sref="new" ui-sref-active="active">Add New Artwork</a>
-          </li>
-          <li>
-            <a ui-sref="artistIndex" ui-sref-active="active">Artists</a>
-		    </ul>
-	     </div>
-     </div>
+    <%= render 'layouts/navigation' %>
 
     <%= yield %>
-  </body>
+</div>
 
   <footer>
     <%= render 'layouts/footer' %>
   </footer>
+  </body>
 </html>

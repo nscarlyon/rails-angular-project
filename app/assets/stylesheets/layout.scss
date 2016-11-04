@@ -13,8 +13,15 @@ h3 {
   color: #b93a32;
 }
 
-body {
-  color: #b93a32
+html, body {
+  color: #b93a32;
+  height: 100%;
+}
+
+#main {
+  overflow: auto;
+  min-height: 100%;
+  padding-bottom: 56px;
 }
 
 .button {
