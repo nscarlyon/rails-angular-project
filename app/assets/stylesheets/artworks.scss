@@ -1,0 +1,35 @@
+// Place all the styles related to the movements controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.artworks ul {
+  width: 100%;
+  padding: 0;
+}
+
+.artworks a {
+  color: #932f28;
+}
+
+.artworks li {
+  background: #f3d6d4;
+  list-style-type: none;
+  color: #932f28;
+  height: 110px;
+}
+
+.artworks li:nth-child(odd) {
+  background: #FFF;
+}
+
+.artworks img {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+}
+
+.movements {
+  display: inline;
+}
