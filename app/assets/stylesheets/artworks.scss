@@ -16,18 +16,19 @@
   background: #f3d6d4;
   list-style-type: none;
   color: #932f28;
-  height: 110px;
-}
-
-.artworks li:nth-child(odd) {
-  background: #FFF;
+  width: 300px;
+  display: inline-table;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  margin: 5px;
+  text-align: center;
 }
 
 .artworks img {
-  float: left;
-  height: 100px;
-  width: 100px;
-  margin: 5px;
+  height: 200px;
+  width: 90%;
+  margin: 5px 0px 5px 15px;
 }
 
 .movements {

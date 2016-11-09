@@ -18,9 +18,9 @@
 
 <ul class ="artworks">
     <li ng-repeat="artwork in artworks.data | filterBy: [filterInput]: searchInput | filter: {movements: {name: filterMovements.name}} | orderBy: 'title' ">
-      <img src="#"></img>
+      <h2><a ui-sref="show({id: artwork.id})">{{artwork.title}}</a> </h2><br>
 
-      <a ui-sref="show({id: artwork.id})">{{artwork.title}}</a>, <br>
+      <img src="#"></img> <br>
 
       {{artwork.medium}} by <a ui-sref="artistShow({id: artwork.artist_id})">{{artwork.artist.name}}</a>,<br>
 
