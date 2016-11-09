@@ -1,6 +1,8 @@
   <p>
   Filter by Movement: <select ng-model="filterMovements"
-                              ng-options="option.name for option in artworks.movements track by option.name" />
+                              ng-options="option.name for option in artworks.movements track by option.name">
+                              <option value="">Select Movement</option>
+                      </select>
   </p>
 
   <p>
