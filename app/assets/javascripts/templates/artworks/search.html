@@ -1,4 +1,4 @@
-<div class="searchOptions">
+<div class="center">
   <p>
   Filter by Movement: <select ng-model="filterMovements"
                               ng-options="option.name for option in artworks.movements track by option.name">
@@ -17,7 +17,7 @@
 
     <input ng-model="searchInput" placeholder="search Input">
   </p>
-
+</div>
 
 <ul class ="artworks">
     <li ng-repeat="artwork in artworks.data | filterBy: [filterInput]: searchInput | filter: {movements: {name: filterMovements.name}} | orderBy: 'title' ">
