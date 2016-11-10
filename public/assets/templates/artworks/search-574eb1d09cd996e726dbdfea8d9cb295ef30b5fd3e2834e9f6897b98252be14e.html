@@ -1,0 +1,38 @@
+<div class="center">
+  <p>
+  Filter by Movement: <select ng-model="filterMovements"
+                              ng-options="option.name for option in artworks.movements track by option.name">
+                              <option value="">Select Movement</option>
+                      </select>
+  </p>
+
+  <p>
+    <select ng-model="filterInput" required>
+    <option value="">Select Property</option>
+    <option value="title">Title</option>
+    <option value="artist.name">Artist</option>
+    <option value="medium">Medium</option>
+    <option value="location">Location</option>
+    <option value="date_seen">Date Seen</option>
+
+    <input ng-model="searchInput" placeholder="search Input">
+  </p>
+</div>
+
+<ul class ="artworks">
+    <li ng-repeat="artwork in artworks.data | filterBy: [filterInput]: searchInput | filter: {movements: {name: filterMovements.name}} | orderBy: 'title' ">
+      <h2><a ui-sref="show({id: artwork.id})">{{artwork.title}}</a> </h2><br>
+
+      <img src="#"></img> <br>
+
+      {{artwork.medium}} by <a ui-sref="artistShow({id: artwork.artist_id})">{{artwork.artist.name}}</a>,<br>
+
+      <a ui-sref="location({name: artwork.location})">{{artwork.location}}</a>,
+
+      Date Seen: {{artwork.date_seen}}, <br>
+
+      Movements:
+          <div ng-repeat="movement in artwork.movements" class="movements">
+            {{movement.name}}
+          </div>
+</ul>
